@@ -25,7 +25,7 @@ print("✅ [2] Đã nạp xong thư viện! Bắt đầu chạy code...", flush=
 # ==========================================
 # CÁC HÀM HỖ TRỢ & CẤU HÌNH
 # ==========================================
-def load_config(config_path=r"C:/Users/dotru/STUDIE/Competition/Sang_tao_tre_AI/VSL_pipeline/configs"): # Nên dùng đường dẫn tương đối để dễ di chuyển code
+def load_config(config_path=r"C:/Users/dotru/STUDIE/Competition/Sang_tao_tre_AI/VSL_pipeline/configs/config.yaml"): # Nên dùng đường dẫn tương đối để dễ di chuyển code
     with open(config_path, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
 

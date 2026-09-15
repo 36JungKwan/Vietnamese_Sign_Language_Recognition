@@ -42,13 +42,13 @@ active_connections = []
 # ==========================================
 # CÁC HÀM XỬ LÝ DỮ LIỆU ĐỘNG TÁC (VISION PIPELINE)
 # ==========================================
-def load_config(config_path="configs/config.yaml"): # Nên dùng đường dẫn tương đối
+def load_config(config_path=r"C:/Users/dotru/STUDIE/Competition/Sang_tao_tre_AI/VSL_pipeline/configs/config.yaml"): # Nên dùng đường dẫn tương đối
     with open(config_path, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
     
 cfg = load_config()
 
-def load_label_map(path="label_map_472.json"):
+def load_label_map(path=r"C:\Users\dotru\STUDIE\Competition\Sang_tao_tre_AI\VSL_pipeline\modules\label_map_472.json"):
     with open(path, "r", encoding="utf-8") as f:
         raw_map = json.load(f)
         
