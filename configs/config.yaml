@@ -1,0 +1,40 @@
+experiment:
+  model_name: "stgcn_transformer"  # Các tùy chọn: stgcn_transformer, stgcn_bilstm, ctr_gcn, stgcn_mstcn, st_tr
+  run_name: "baseline" # Ghi chú ngắn gọn cho lần chạy này
+
+data:
+  base_dir: "C:/Users/dotru/STUDIE/Competition/Sang_tao_tre_AI/processed_augmented/keypoints_splited"
+  json_meta: "C:/Users/dotru/STUDIE/Competition/Sang_tao_tre_AI/processed_augmented/vsl_full_front_augmented.json"
+  sequence_length: 48
+  batch_size: 64
+  num_workers: 4
+
+model:
+  # Tham số chung cho mọi kiến trúc
+  in_channels: 9
+  num_nodes: 76   
+  d_model: 128
+  dropout: 0.2
+
+  # Tham số riêng cho ST-GCN + Transformer & ST-TR
+  num_heads: 8
+  num_layers: 4
+  st_tr_d_model: 128  # ST-TR cần d_model nhỏ hơn để tránh tràn RAM (OOM)
+
+  # Tham số riêng cho ST-GCN + BiLSTM
+  lstm_hidden_size: 256
+  lstm_layers: 2
+
+train:
+  epochs: 50
+  checkpoint_dir: "checkpoints"
+
+  # Tối ưu hóa (Optimizer & Loss)
+  learning_rate: 0.001
+  weight_decay: 0.01
+  label_smoothing: 0.1
+  
+  # Lên lịch học (Scheduler ReduceLROnPlateau)
+  scheduler_patience: 4    # Đợi 4 epoch không cải thiện thì giảm LR
+  scheduler_factor: 0.5    # Giảm LR đi một nửa
+  min_lr: 0.000001         # 1e-6 (Đáy của LR)

@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+*.so
+.Python
+.venv/
+venv/
+env/
+ENV/
+*.egg-info/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Large local datasets and generated artifacts
+data/
+datasets/
+processed_augmented/
+keypoints_splited/
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+
+# Training output and experiment logs
+checkpoints/*
+!checkpoints/.gitkeep
+runs/
+tensorboard/
+logs/
+*.log
+
+# Jupyter and tooling
+.ipynb_checkpoints/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+coverage.xml
+
+# OS / editor files
+.DS_Store
+Thumbs.db
+.vscode/*.code-workspace
