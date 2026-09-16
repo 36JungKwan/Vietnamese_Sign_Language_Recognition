@@ -1,0 +1,48 @@
+=== KẾT QUẢ BENCHMARK MÔ HÌNH ===
+Model Name       : CTR_GCN
+Run Name         : baseline
+---------------------------------
+Parameters       : 1.476 M (Triệu tham số)
+Param Memory     : 5.69 MB
+MACs / FLOPS     : 4.941 G (Tỷ phép tính / sequence)
+Inference Time   : 4.28 ms / sequence
+Max Throughput   : 234 FPS (Khung hình/giây)
+=================================
+
+CTR_GCN_Model(
+  (ctr_gcn): Sequential(
+    (0): CTRGCN_Block(
+      (conv_q): Conv2d(9, 2, kernel_size=(1, 1), stride=(1, 1))
+      (conv_k): Conv2d(9, 2, kernel_size=(1, 1), stride=(1, 1))
+      (spatial_conv): Conv2d(9, 64, kernel_size=(1, 1), stride=(1, 1))
+      (temporal_conv): Conv2d(64, 64, kernel_size=(9, 1), stride=(1, 1), padding=(4, 0))
+      (relu): ReLU(inplace=True)
+      (bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (residual): Sequential(
+        (0): Conv2d(9, 64, kernel_size=(1, 1), stride=(1, 1))
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): CTRGCN_Block(
+      (conv_q): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1))
+      (conv_k): Conv2d(64, 16, kernel_size=(1, 1), stride=(1, 1))
+      (spatial_conv): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1))
+      (temporal_conv): Conv2d(256, 256, kernel_size=(9, 1), stride=(1, 1), padding=(4, 0))
+      (relu): ReLU(inplace=True)
+      (bn): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (residual): Sequential(
+        (0): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1))
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (2): CTRGCN_Block(
+      (conv_q): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1))
+      (conv_k): Conv2d(256, 64, kernel_size=(1, 1), stride=(1, 1))
+      (spatial_conv): Conv2d(256, 256, kernel_size=(1, 1), stride=(1, 1))
+      (temporal_conv): Conv2d(256, 256, kernel_size=(9, 1), stride=(1, 1), padding=(4, 0))
+      (relu): ReLU(inplace=True)
+      (bn): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+    )
+  )
+  (classifier): Linear(in_features=256, out_features=472, bias=True)
+)

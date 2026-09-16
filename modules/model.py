@@ -66,7 +66,9 @@ class CTRGCN_Block(nn.Module):
         q = self.conv_q(x).mean(dim=2) # [B, C//4, V]
         k = self.conv_k(x).mean(dim=2) # [B, C//4, V]
         # Sinh ma trận A_dynamic shape [B, V, V]
-        A_dynamic = torch.einsum('bcv,bcw->bvw', q, k) 
+        scale = (q.size(-1) ** -0.5)
+        A_dynamic = torch.einsum('bcv,bcw->bvw', q, k)
+        A_dynamic = torch.clamp(A_dynamic, min=-10.0, max=10.0) 
         A_dynamic = torch.softmax(A_dynamic, dim=-1)
         
         # Gộp đồ thị Tĩnh + Động
@@ -90,7 +92,7 @@ class STGCN_Transformer(nn.Module):
         super().__init__()
         self.stgcn = nn.Sequential(STGCN_Block(in_channels, 64, num_nodes), STGCN_Block(64, d_model, num_nodes))
         self.positional_encoding = nn.Parameter(torch.randn(1, 100, d_model)) 
-        encoder_layer = nn.TransformerEncoderLayer(d_model=d_model, nhead=num_heads, batch_first=True, dropout=dropout)
+        encoder_layer = nn.TransformerEncoderLayer(d_model=d_model, nhead=num_heads, dim_feedforward=d_model*2, batch_first=True, dropout=dropout)
         self.transformer = nn.TransformerEncoder(encoder_layer, num_layers=num_layers)
         self.classifier = nn.Linear(d_model, num_classes)
 
@@ -178,6 +180,13 @@ class ST_Transformer(nn.Module):
         super().__init__()
         self.node_embedding = nn.Linear(in_channels, d_model)
         
+        # --- BỔ SUNG: Mã hóa vị trí (Positional Encoding) ---
+        # Đánh dấu thứ tự cho 76 điểm khớp (Spatial)
+        self.spatial_pe = nn.Parameter(torch.randn(1, num_nodes, d_model)) 
+        # Đánh dấu thứ tự cho các frame thời gian (Tối đa 100 frames)
+        self.temporal_pe = nn.Parameter(torch.randn(1, 100, d_model)) 
+        # ---------------------------------------------------
+        
         # Spatial Transformer (Học liên kết giữa 76 khớp trong 1 frame)
         spatial_layer = nn.TransformerEncoderLayer(d_model=d_model, nhead=num_heads, batch_first=True)
         self.spatial_encoder = nn.TransformerEncoder(spatial_layer, num_layers=2)
@@ -196,12 +205,14 @@ class ST_Transformer(nn.Module):
         # 1. Spatial Attention
         x = x.reshape(B*T, V, C)           # Trải phẳng Batch và Time
         x = self.node_embedding(x)         # -> [B*T, V, d_model]
-        x = self.spatial_encoder(x)        # Tự chú ý giữa các khớp
+        x = x + self.spatial_pe[:, :V, :]  # Bơm nhận thức Không gian (Vị trí khớp)
+        x = x + self.spatial_encoder(x)        # Tự chú ý giữa các khớp
         x = x.mean(dim=1)                  # Spatial Pooling -> [B*T, d_model]
         
         # 2. Temporal Attention
         x = x.reshape(B, T, -1)            # Phục hồi trục Time -> [B, T, d_model]
-        x = self.temporal_encoder(x)       # Tự chú ý giữa các frame
+        x = x + self.temporal_pe[:, :T, :] # Bơm nhận thức Thời gian (Thứ tự frame)
+        x = x + self.temporal_encoder(x)       # Tự chú ý giữa các frame
         x = x.mean(dim=1)                  # Temporal Pooling -> [B, d_model]
         
         return self.classifier(x)

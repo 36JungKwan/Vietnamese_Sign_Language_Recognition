@@ -13,8 +13,8 @@ model:
   # Tham số chung cho mọi kiến trúc
   in_channels: 9
   num_nodes: 76   
-  d_model: 128
-  dropout: 0.2
+  d_model: 256
+  dropout: 0.1
 
   # Tham số riêng cho ST-GCN + Transformer & ST-TR
   num_heads: 8
@@ -31,7 +31,7 @@ train:
 
   # Tối ưu hóa (Optimizer & Loss)
   learning_rate: 0.001
-  weight_decay: 0.01
+  weight_decay: 0.001
   label_smoothing: 0.1
   
   # Lên lịch học (Scheduler ReduceLROnPlateau)

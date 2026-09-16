@@ -1,0 +1,2 @@
+Epoch,LR,Train_Loss,Train_Acc,Val_Loss,Val_Acc
+1,0.001,nan,0.0031092267312739755,nan,0.0005672149744753262

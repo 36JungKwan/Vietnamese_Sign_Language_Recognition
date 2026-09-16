@@ -13,8 +13,8 @@ class TemporalDecoder:
         alpha: float = 0.5, 
         conf_thresh: float = 0.8, 
         motion_thresh: float = 0.008,
-        end_frames_thresh: int = 80,
-        cooldown_frames: int = 40  # THÊM THÔNG SỐ NÀY (Khoảng 0.6 giây)
+        end_frames_thresh: int = 40,
+        cooldown_frames: int = 20  # THÊM THÔNG SỐ NÀY (Khoảng 0.6 giây)
     ):
         self.idx_to_class = idx_to_class
         self.alpha = alpha

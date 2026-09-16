@@ -13,6 +13,13 @@ import traceback
 import yaml
 from dotenv import load_dotenv
 
+try:
+    import keyboard
+    KEYBOARD_AVAILABLE = True
+except ImportError:
+    KEYBOARD_AVAILABLE = False
+    print("⚠️ Thư viện 'keyboard' chưa được cài. Chạy 'pip install keyboard' để bắt phím Space trên máy chủ.")
+
 # Load các biến môi trường từ file .env
 load_dotenv()
 
@@ -25,24 +32,32 @@ os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3'   # Cấm các log cảnh báo phần c
 if sys.stdout.encoding != 'utf-8':
     sys.stdout.reconfigure(encoding='utf-8')
 
-# --- THAY ĐỔI: Nhúng Model Factory thay vì VSLModel cứng ---
+# --- Nhúng Model Factory ---
 from model import create_model 
 from decoder import TemporalDecoder
 from llm_agent import LLMAgent
 
 # --- GLOBAL CONFIG & QUEUES ---
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-# DEVICE = torch.device("cpu")
 
 frame_queue = asyncio.Queue(maxsize=30) 
 llm_queue = asyncio.Queue()
 tts_queue = asyncio.Queue()
 active_connections = []
 
+# Trạng thái nhận diện (Được bật/tắt bằng phím Space)
+IS_RECORDING = False
+
+def toggle_recording():
+    global IS_RECORDING
+    IS_RECORDING = not IS_RECORDING
+    status_str = "🟢 ĐANG BẬT NHẬN DIỆN (Bắt đầu múa ký hiệu...)" if IS_RECORDING else "🔴 ĐÃ TẮT NHẬN DIỆN (Tạm dừng)"
+    print(f"\n[HOTKEY SPACE] {status_str}", flush=True)
+
 # ==========================================
 # CÁC HÀM XỬ LÝ DỮ LIỆU ĐỘNG TÁC (VISION PIPELINE)
 # ==========================================
-def load_config(config_path=r"C:/Users/dotru/STUDIE/Competition/Sang_tao_tre_AI/VSL_pipeline/configs/config.yaml"): # Nên dùng đường dẫn tương đối
+def load_config(config_path=r"C:/Users/dotru/STUDIE/Competition/Sang_tao_tre_AI/VSL_pipeline/configs/config.yaml"):
     with open(config_path, "r", encoding="utf-8") as f:
         return yaml.safe_load(f)
     
@@ -52,15 +67,11 @@ def load_label_map(path=r"C:\Users\dotru\STUDIE\Competition\Sang_tao_tre_AI\VSL_
     with open(path, "r", encoding="utf-8") as f:
         raw_map = json.load(f)
         
-    # Trường hợp 1: Nếu file JSON lưu dưới dạng List ["An ủi", "Bố", ...]
     if isinstance(raw_map, list):
         idx_to_class = {idx: name for idx, name in enumerate(raw_map)}
-        
-    # Trường hợp 2: Nếu file JSON lưu dưới dạng Dict {"An ủi": 0, "Bố": 1}
     elif isinstance(raw_map, dict):
         class_to_idx = raw_map.get("root", raw_map)
         idx_to_class = {int(v): k for k, v in class_to_idx.items()}
-        
     else:
         raise ValueError("Định dạng file label_map.json không được hỗ trợ!")
         
@@ -103,9 +114,7 @@ def build_tensor(frame_buffer):
     """Chuyển đổi buffer 48 frames thành Tensor 9 channels (x,y,z, vx,vy,vz, ax,ay,az)"""
     data = np.stack(frame_buffer, axis=0) # (48, 76, 3)
 
-    # Lấy tọa độ của Node 75 (Cổ) ở toàn bộ 48 frames. Shape sẽ là (48, 1, 3)
     neck_coords = data[:, 75:76, :] 
-    # Trừ tất cả các điểm cho tọa độ cổ để ép Cổ về gốc tọa độ (0, 0, 0)
     data = data - neck_coords
     
     velocity = np.zeros_like(data)
@@ -117,7 +126,6 @@ def build_tensor(frame_buffer):
     acceleration[0] = acceleration[1]
     
     combined = np.concatenate([data, velocity, acceleration], axis=-1) # (48, 76, 9)
-    # (48, 76, 9) -> (9, 48, 76) -> (1, 9, 48, 76)
     tensor = torch.tensor(combined, dtype=torch.float32).permute(2, 0, 1).unsqueeze(0) 
     return tensor.to(DEVICE)
 
@@ -125,35 +133,30 @@ def build_tensor(frame_buffer):
 # WORKERS BẤT ĐỒNG BỘ
 # ==========================================
 async def vision_worker():
+    global IS_RECORDING
     print("[Worker] Vision Worker Started. Đang kiểm tra file...", flush=True)
     
-    label_map_path = "label_map_472.json"
-    
-    # ⚠️ LƯU Ý QUAN TRỌNG: Bạn nhớ cập nhật đường dẫn checkpoint_path này 
-    # trỏ vào đúng thư mục động mà file train.py vừa sinh ra nhé!
-    # Ví dụ: checkpoints/stgcn_bilstm/run_baseline_1_20260915_1430/best_vsl_model.pth
-    checkpoint_path = r"checkpoints/best_vsl_model.pth" 
+    label_map_path = r"C:\Users\dotru\STUDIE\Competition\Sang_tao_tre_AI\VSL_pipeline\modules\label_map_472.json"
+    checkpoint_path = r"C:\Users\dotru\STUDIE\Competition\Sang_tao_tre_AI\VSL_pipeline\modules\checkpoints\stgcn_transformer\baseline_20260915_1643\best_vsl_model.pth" 
     
     try:
         idx_to_class, num_classes = load_label_map(label_map_path)
         
-        # --- THAY ĐỔI: Khởi tạo tự động qua Model Factory ---
         model = create_model(cfg, num_classes).to(DEVICE)
-        
         checkpoint = torch.load(checkpoint_path, map_location=DEVICE)
-        model.load_state_dict(checkpoint['model_state_dict'])
+        model.load_state_dict(checkpoint['model_state_dict'], strict=False)
         model.eval()
         
-        # Tự động in ra tên model đang chạy để bạn dễ kiểm tra
         model_name = cfg['experiment']['model_name'].upper()
         print(f"✅ Đã nạp xong trọng số {model_name}! (Độ chính xác Val: {checkpoint.get('val_acc', 0):.4f})", flush=True)
+        print("💡 [HƯỚNG DẪN]: Nhấn phím SPACE trên bàn phím để BẬT/TẮT nhận diện!", flush=True)
         
         decoder = TemporalDecoder(
             idx_to_class, 
             alpha=0.5, 
             conf_thresh=0.5,      
             motion_thresh=0.005,
-            end_frames_thresh=15  # Đã tăng độ trễ ngắt câu lên ~0.5 giây
+            end_frames_thresh=15
         )
         frame_buffer = collections.deque(maxlen=cfg['data']['sequence_length'])
         
@@ -162,10 +165,17 @@ async def vision_worker():
         with mp.solutions.holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
             print("✅ MediaPipe đã sẵn sàng! Đang chờ Camera...", flush=True)
             
+            last_recording_state = IS_RECORDING
+
             while True:
                 jpeg_bytes = await frame_queue.get()
                 
                 try:
+                    # Nếu trạng thái chuyển từ bật -> tắt hoặc tắt -> bật, clear buffer để tránh dính frames cũ
+                    if last_recording_state != IS_RECORDING:
+                        frame_buffer.clear()
+                        last_recording_state = IS_RECORDING
+
                     np_arr = np.frombuffer(jpeg_bytes, np.uint8)
                     frame = cv2.imdecode(np_arr, cv2.IMREAD_COLOR)
                     if frame is None: 
@@ -175,31 +185,28 @@ async def vision_worker():
                     frame_rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
                     results = holistic.process(frame_rgb)
                     
-                    hand_detected = bool(results.left_hand_landmarks or results.right_hand_landmarks)
-                    landmarks = extract_landmarks(results)
-                    frame_buffer.append(landmarks)
-                    
-                    if len(frame_buffer) == cfg['data']['sequence_length']:
-                        input_tensor = build_tensor(list(frame_buffer))
-                        with torch.no_grad(), torch.autocast(device_type=DEVICE.type, dtype=torch.float16):
-                            logits = model(input_tensor)
-                            probs = torch.softmax(logits, dim=-1).cpu().numpy()[0]
+                    # CHỈ KHI BẬT NHẬN DIỆN (IS_RECORDING == True) THÌ MỚI ĐẨY QUA MODEL
+                    if IS_RECORDING:
+                        hand_detected = bool(results.left_hand_landmarks or results.right_hand_landmarks)
+                        landmarks = extract_landmarks(results)
+                        frame_buffer.append(landmarks)
                         
-                        motion_energy = np.mean(np.abs(landmarks[33:75] - frame_buffer[-2][33:75]))
-                        
-                        # --- RADAR LOG (Mở ra khi test để căn góc/tốc độ múa) ---
-                        top_word = idx_to_class[np.argmax(probs)]
-                        # print(f"👀 [Radar] Motion: {motion_energy:.4f} | Hand: {hand_detected} | Đoán: {top_word} ({np.max(probs)*100:.1f}%)", flush=True)
-                        # --------------------------------------------------------
-
-                        new_word, sentence = decoder.process_window(probs, motion_energy, hand_detected)
-                        
-                        if new_word:
-                            print(f"[AI] ⚡ Đoán được từ: {new_word}", flush=True)
-                        if sentence:
-                            print(f"[AI] 🟢 Ngắt câu! Gửi lên LLM: {sentence}", flush=True)
-                            await llm_queue.put(sentence)
+                        if len(frame_buffer) == cfg['data']['sequence_length']:
+                            input_tensor = build_tensor(list(frame_buffer))
+                            with torch.no_grad(), torch.autocast(device_type=DEVICE.type, dtype=torch.float16):
+                                logits = model(input_tensor)
+                                probs = torch.softmax(logits, dim=-1).cpu().numpy()[0]
                             
+                            motion_energy = np.mean(np.abs(landmarks[33:75] - frame_buffer[-2][33:75]))
+                            new_word, sentence = decoder.process_window(probs, motion_energy, hand_detected)
+                            print(f"👀 [Radar] Buffer: {len(frame_buffer)}/48 | Motion: {motion_energy:.4f} | Hand: {hand_detected}", flush=True)
+                            
+                            if new_word:
+                                print(f"[AI] ⚡ Đoán được từ: {new_word}", flush=True)
+                            if sentence:
+                                print(f"[AI] 🟢 Ngắt câu! Gửi lên LLM: {sentence}", flush=True)
+                                await llm_queue.put(sentence)
+                                
                 except Exception as e:
                     print(f"❌ [LỖI FRAME]: {e}", flush=True)
                 
@@ -212,7 +219,6 @@ async def vision_worker():
 
 async def llm_worker():
     print("[Worker] LLM Worker Started.")
-    # (Khuyên dùng: Nên đưa API key vào biến môi trường os.environ trong tương lai)
     agent = LLMAgent(api_key=api_key) 
     
     while True:
@@ -242,20 +248,31 @@ async def tts_worker():
         tts_queue.task_done()
 
 # ==========================================
-# ENDPOINT & LIFESPAN (Chuẩn mới FastAPI)
+# ENDPOINT & LIFESPAN
 # ==========================================
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    # Khởi động các worker khi Server bật
+    # Đăng ký sự kiện nhấn phím Space toàn hệ thống
+    if KEYBOARD_AVAILABLE:
+        try:
+            keyboard.add_hotkey('space', toggle_recording)
+            print("⌨️ [HOTKEY] Đã đăng ký phím 'Space' thành công!")
+        except Exception as e:
+            print(f"⚠️ Không thể đăng ký hook keyboard: {e}")
+
     tasks = [
         asyncio.create_task(vision_worker()),
         asyncio.create_task(llm_worker()),
         asyncio.create_task(tts_worker())
     ]
     yield
-    # Dọn dẹp khi Server tắt (nếu cần)
     for task in tasks:
         task.cancel()
+    if KEYBOARD_AVAILABLE:
+        try:
+            keyboard.unhook_all_hotkeys()
+        except Exception:
+            pass
 
 app = FastAPI(title="VSL Realtime Pipeline", lifespan=lifespan)
 
@@ -266,13 +283,27 @@ async def video_stream(websocket: WebSocket):
     print(f"🔌 [WebSocket] Client đã kết nối!")
     try:
         while True:
-            data = await websocket.receive_bytes()
-            if frame_queue.full():
-                try:
-                    _ = frame_queue.get_nowait() 
-                except asyncio.QueueEmpty:
-                    pass
-            await frame_queue.put(data)
+            # Nhận cả bytes (video frame) hoặc text (lệnh điều khiển từ Web Client)
+            message = await websocket.receive()
+            
+            if "bytes" in message and message["bytes"]:
+                data = message["bytes"]
+                if frame_queue.full():
+                    try:
+                        _ = frame_queue.get_nowait() 
+                    except asyncio.QueueEmpty:
+                        pass
+                await frame_queue.put(data)
+                
+            elif "text" in message and message["text"]:
+                text_msg = message["text"].strip().lower()
+                # Nếu client web bắt phím Space và gửi text qua socket
+                if text_msg in ["space", "toggle", "toggle_recording"]:
+                    toggle_recording()
+                    await websocket.send_json({
+                        "type": "status", 
+                        "is_recording": IS_RECORDING
+                    })
             
     except WebSocketDisconnect:
         if websocket in active_connections:

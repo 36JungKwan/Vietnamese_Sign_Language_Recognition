@@ -113,6 +113,8 @@ def train_one_epoch(model, dataloader, criterion, optimizer, scaler, device):
             loss = criterion(outputs, labels)
         
         scaler.scale(loss).backward()
+        scaler.unscale_(optimizer) # Gỡ scale của AMP ra trước
+        torch.nn.utils.clip_grad_norm_(model.parameters(), max_norm=1.0)
         scaler.step(optimizer)
         scaler.update()
         
@@ -246,7 +248,6 @@ def main():
         factor=t_cfg.get('scheduler_factor', 0.5), 
         patience=t_cfg.get('scheduler_patience', 4), 
         min_lr=float(t_cfg.get('min_lr', 1e-6)), 
-        verbose=True
     )
     
     best_val_acc = 0.0

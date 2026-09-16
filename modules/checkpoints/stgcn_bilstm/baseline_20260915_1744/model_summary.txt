@@ -1,0 +1,37 @@
+=== KẾT QUẢ BENCHMARK MÔ HÌNH ===
+Model Name       : STGCN_BILSTM
+Run Name         : baseline
+---------------------------------
+Parameters       : 3.535 M (Triệu tham số)
+Param Memory     : 13.53 MB
+MACs / FLOPS     : 2.546 G (Tỷ phép tính / sequence)
+Inference Time   : 4.84 ms / sequence
+Max Throughput   : 207 FPS (Khung hình/giây)
+=================================
+
+STGCN_BiLSTM(
+  (stgcn): Sequential(
+    (0): STGCN_Block(
+      (spatial_conv): Conv2d(9, 64, kernel_size=(1, 1), stride=(1, 1))
+      (temporal_conv): Conv2d(64, 64, kernel_size=(9, 1), stride=(1, 1), padding=(4, 0))
+      (relu): ReLU(inplace=True)
+      (bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (residual): Sequential(
+        (0): Conv2d(9, 64, kernel_size=(1, 1), stride=(1, 1))
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): STGCN_Block(
+      (spatial_conv): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1))
+      (temporal_conv): Conv2d(256, 256, kernel_size=(9, 1), stride=(1, 1), padding=(4, 0))
+      (relu): ReLU(inplace=True)
+      (bn): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (residual): Sequential(
+        (0): Conv2d(64, 256, kernel_size=(1, 1), stride=(1, 1))
+        (1): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (lstm): LSTM(256, 256, num_layers=2, batch_first=True, dropout=0.2, bidirectional=True)
+  (classifier): Linear(in_features=512, out_features=472, bias=True)
+)
