@@ -5,13 +5,11 @@ import numpy as np
 from torch.utils.data import Dataset
 import torch.nn.functional as F
 
+# Kéo "Trái tim chuẩn hóa" vào
+from core_vision import normalize_scale_and_coords, build_9_channel_tensor
+
 class VSLDataset(Dataset):
     def __init__(self, data_dir, json_metadata_path, split="train", sequence_length=48):
-        """
-        data_dir: Đường dẫn tới thư mục `keypoints_splited`
-        json_metadata_path: Đường dẫn tới file `vsl_full_front_augmented.json`
-        split: "train" hoặc "test"
-        """
         self.sequence_length = sequence_length
         self.split = split
         self.samples = []
@@ -20,19 +18,20 @@ class VSLDataset(Dataset):
         with open(json_metadata_path, 'r', encoding='utf-8') as f:
             metadata = json.load(f)
             
-        # 2. Tự động gom toàn bộ nhãn (gloss) duy nhất để làm từ điển
+        # 2. Tự động gom toàn bộ nhãn (gloss)
         unique_glosses = sorted(list(set([item['gloss'] for item in metadata])))
         self.label_map = {gloss: idx for idx, gloss in enumerate(unique_glosses)}
+        
+        # --- TÍNH NĂNG MỚI: Thêm class IDLE (Đứng yên) ---
+        self.label_map['Idle'] = len(self.label_map) # Sẽ chiếm ID 472
         self.num_classes = len(self.label_map)
         
-        # 3. Lọc file theo Split (train hoặc test) và lưu đường dẫn
+        # 3. Lọc file theo Split (train hoặc test)
         missing_files = 0
         for item in metadata:
             if item['split'] == split:
                 gloss = item['gloss']
                 vid = item['videoid']
-                
-                # Cấu trúc: keypoints_splited / train / An ủi / 127824.npy
                 file_path = os.path.join(data_dir, split, gloss, f"{vid}.npy")
                 
                 if os.path.exists(file_path):
@@ -43,53 +42,52 @@ class VSLDataset(Dataset):
                 else:
                     missing_files += 1
                     
-        print(f"📊 [Tập {split.upper()}] Nạp thành công {len(self.samples)} video. (Thiếu {missing_files} file).")
+        # --- TÍNH NĂNG MỚI: Bơm thêm 10% dữ liệu là trạng thái Đứng Yên (Idle) ---
+        self.idle_count = int(len(self.samples) * 0.1)
+        self.total_length = len(self.samples) + self.idle_count
+                    
+        print(f"📊 [Tập {split.upper()}] Nạp {len(self.samples)} video thật. Sinh thêm {self.idle_count} video IDLE. (Thiếu {missing_files} file).")
 
     def __len__(self):
-        return len(self.samples)
+        return self.total_length
 
     def interpolate_sequence(self, data):
-        """Ép video có độ dài T (vd: 30, 55...) về chuẩn 48 frames"""
         T, V, C = data.shape
         if T == self.sequence_length:
             return data
-
-        # Chuyển (T, 76, 3) -> (1, 228, T) để nội suy 1D
         data_tensor = torch.tensor(data, dtype=torch.float32).reshape(T, V * C).permute(1, 0).unsqueeze(0)
-        
-        # Co/giãn tuyến tính theo thời gian
         interpolated = F.interpolate(data_tensor, size=self.sequence_length, mode='linear', align_corners=False)
-        
-        # Phục hồi hình dáng -> (48, 76, 3)
         return interpolated.squeeze(0).permute(1, 0).reshape(self.sequence_length, V, C).numpy()
 
     def __getitem__(self, idx):
+        # NẾU RƠI VÀO VÙNG DỮ LIỆU IDLE (Tự động sinh mảng đứng yên)
+        if idx >= len(self.samples):
+            # Lấy ngẫu nhiên 1 video thật
+            real_sample = self.samples[np.random.randint(0, len(self.samples))]
+            data = np.load(real_sample['path'])
+            # Lấy đúng frame đầu tiên (lúc người múa đang hạ tay chuẩn bị)
+            first_frame = data[0:1] 
+            # Nhân bản lên 48 frames + Thêm nhiễu siêu nhỏ giả lập rung tay do nhịp tim
+            idle_data = np.repeat(first_frame, self.sequence_length, axis=0)
+            idle_data += np.random.normal(0, 0.001, idle_data.shape)
+            
+            data_norm = normalize_scale_and_coords(idle_data)
+            tensor = build_9_channel_tensor(data_norm)
+            label = torch.tensor(self.label_map['Idle'], dtype=torch.long)
+            return tensor, label
+
+        # NẾU LÀ DỮ LIỆU THẬT MÚA KÝ HIỆU
         sample = self.samples[idx]
         data = np.load(sample['path'])  
 
-        # 1. Ép số frame về chuẩn (vd: 48)
+        # 1. Ép frame về 48
         data = self.interpolate_sequence(data)
 
-        # 2. CHUẨN HÓA GỐC TỌA ĐỘ (Hệ quy chiếu Cổ - Node 75)
-        # Ép điểm cổ của mọi frame về tọa độ (0, 0, 0)
-        neck_coords = data[:, 75:76, :] 
-        data = data - neck_coords       
-
-        # 3. Tính Vận tốc (Đạo hàm bậc 1)
-        velocity = np.zeros_like(data)
-        velocity[1:] = data[1:] - data[:-1]
-        velocity[0] = velocity[1] 
-
-        # 4. Tính Gia tốc (Đạo hàm bậc 2)
-        acceleration = np.zeros_like(velocity)
-        acceleration[1:] = velocity[1:] - velocity[:-1]
-        acceleration[0] = acceleration[1]
-
-        # 5. Gộp 9 kênh (x,y,z, vx,vy,vz, ax,ay,az) -> Shape: (48, 76, 9)
-        combined = np.concatenate([data, velocity, acceleration], axis=-1)
-
-        # 6. Trả về đúng chiều Model cần: (Channels, Time, Nodes) -> (9, 48, 76)
-        tensor = torch.tensor(combined, dtype=torch.float32).permute(2, 0, 1)
+        # 2. CHUẨN HÓA (Dùng hàm chung 100% với App.py)
+        data_norm = normalize_scale_and_coords(data)
+        
+        # 3. XÂY DỰNG TENSOR 9 KÊNH (Dùng hàm chung 100% với App.py)
+        tensor = build_9_channel_tensor(data_norm)
+        
         label = torch.tensor(sample['label'], dtype=torch.long)
-
         return tensor, label

@@ -12,6 +12,7 @@ import sys
 import traceback
 import yaml
 from dotenv import load_dotenv
+from core_vision import extract_standard_landmarks, normalize_scale_and_coords, build_9_channel_tensor
 
 try:
     import keyboard
@@ -137,7 +138,7 @@ async def vision_worker():
     print("[Worker] Vision Worker Started. Đang kiểm tra file...", flush=True)
     
     label_map_path = r"C:\Users\dotru\STUDIE\Competition\Sang_tao_tre_AI\VSL_pipeline\modules\label_map_472.json"
-    checkpoint_path = r"C:\Users\dotru\STUDIE\Competition\Sang_tao_tre_AI\VSL_pipeline\modules\checkpoints\stgcn_transformer\baseline_20260915_1643\best_vsl_model.pth" 
+    checkpoint_path = r"C:\Users\dotru\STUDIE\Competition\Sang_tao_tre_AI\VSL_pipeline\modules\checkpoints\ctr_gcn\baseline_20260917_1148\best_vsl_model.pth" 
     
     try:
         idx_to_class, num_classes = load_label_map(label_map_path)
@@ -188,24 +189,43 @@ async def vision_worker():
                     # CHỈ KHI BẬT NHẬN DIỆN (IS_RECORDING == True) THÌ MỚI ĐẨY QUA MODEL
                     if IS_RECORDING:
                         hand_detected = bool(results.left_hand_landmarks or results.right_hand_landmarks)
-                        landmarks = extract_landmarks(results)
+                        
+                        # Dùng hàm CHUẨN để bóc tách 76 node
+                        landmarks = extract_standard_landmarks(results)
                         frame_buffer.append(landmarks)
                         
                         if len(frame_buffer) == cfg['data']['sequence_length']:
-                            input_tensor = build_tensor(list(frame_buffer))
+                            # Xây dựng mảng (48, 76, 3)
+                            raw_data = np.stack(list(frame_buffer), axis=0)
+                            
+                            # Chạy qua phễu chuẩn hóa kích thước + tọa độ
+                            norm_data = normalize_scale_and_coords(raw_data)
+                            
+                            # Tính vận tốc/gia tốc và convert ra Tensor
+                            input_tensor = build_9_channel_tensor(norm_data).unsqueeze(0).to(DEVICE)
+                            
                             with torch.no_grad(), torch.autocast(device_type=DEVICE.type, dtype=torch.float16):
                                 logits = model(input_tensor)
                                 probs = torch.softmax(logits, dim=-1).cpu().numpy()[0]
                             
                             motion_energy = np.mean(np.abs(landmarks[33:75] - frame_buffer[-2][33:75]))
-                            new_word, sentence = decoder.process_window(probs, motion_energy, hand_detected)
-                            print(f"👀 [Radar] Buffer: {len(frame_buffer)}/48 | Motion: {motion_energy:.4f} | Hand: {hand_detected}", flush=True)
+                            top_idx = np.argmax(probs)
+                            top_word = idx_to_class[top_idx]
                             
-                            if new_word:
-                                print(f"[AI] ⚡ Đoán được từ: {new_word}", flush=True)
-                            if sentence:
-                                print(f"[AI] 🟢 Ngắt câu! Gửi lên LLM: {sentence}", flush=True)
-                                await llm_queue.put(sentence)
+                            # NẾU MODEL ĐOÁN RA IDLE (Đứng im) THÌ BỎ QUA KHÔNG GỬI VÀO DECODER
+                            if top_word == "Idle":
+                                # Tạo mảng xác suất giả (toàn số 0) để Decoder không nhận nhầm từ Idle
+                                dummy_probs = np.zeros_like(probs)
+                                # Ép motion_energy = 0 và hand_detected = False để kích hoạt cơ chế ngắt câu
+                                new_word, sentence = decoder.process_window(dummy_probs, 0.0, False)
+                            else:
+                                new_word, sentence = decoder.process_window(probs, motion_energy, hand_detected)
+                                
+                                if new_word:
+                                    print(f"[AI] ⚡ Đoán được từ: {new_word}", flush=True)
+                                if sentence:
+                                    print(f"[AI] 🟢 Ngắt câu! Gửi lên LLM: {sentence}", flush=True)
+                                    await llm_queue.put(sentence)
                                 
                 except Exception as e:
                     print(f"❌ [LỖI FRAME]: {e}", flush=True)
