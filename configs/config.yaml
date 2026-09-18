@@ -1,11 +1,11 @@
 experiment:
-  model_name: "st_tr"  # Các tùy chọn: stgcn_transformer, stgcn_bilstm, ctr_gcn, stgcn_mstcn, st_tr
+  model_name: "ctr_gcn"  # Các tùy chọn: stgcn_transformer, stgcn_bilstm, ctr_gcn, stgcn_mstcn, st_tr
   run_name: "baseline" # Ghi chú ngắn gọn cho lần chạy này
 
 data:
   base_dir: "C:/Users/dotru/STUDIE/Competition/Sang_tao_tre_AI/processed_augmented/keypoints_v2"
   json_meta: "C:/Users/dotru/STUDIE/Competition/Sang_tao_tre_AI/processed_augmented/vsl_full_front_augmented.json"
-  sequence_length: 48
+  sequence_length: 15
   batch_size: 64
   num_workers: 4
 
