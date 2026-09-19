@@ -1,6 +1,6 @@
 experiment:
-  model_name: "ctr_gcn"  # Các tùy chọn: stgcn_transformer, stgcn_bilstm, ctr_gcn, stgcn_mstcn, st_tr
-  run_name: "baseline" # Ghi chú ngắn gọn cho lần chạy này
+  model_name: "stgcn_transformer"  # Các tùy chọn: stgcn_transformer, stgcn_bilstm, ctr_gcn, stgcn_mstcn, st_tr
+  run_name: "frame15" # Ghi chú ngắn gọn cho lần chạy này
 
 data:
   base_dir: "C:/Users/dotru/STUDIE/Competition/Sang_tao_tre_AI/processed_augmented/keypoints_v2"

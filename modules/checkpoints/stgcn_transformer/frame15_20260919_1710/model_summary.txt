@@ -1,0 +1,54 @@
+=== KẾT QUẢ BENCHMARK MÔ HÌNH ===
+Model Name       : STGCN_TRANSFORMER
+Run Name         : frame15
+---------------------------------
+Parameters       : 0.530 M (Triệu tham số)
+Param Memory     : 3.12 MB
+MACs / FLOPS     : 0.236 G (Tỷ phép tính / sequence)
+Inference Time   : 2.36 ms / sequence
+Max Throughput   : 424 FPS (Khung hình/giây)
+=================================
+
+STGCN_Transformer(
+  (stgcn): Sequential(
+    (0): STGCN_Block(
+      (spatial_conv): Conv2d(9, 64, kernel_size=(1, 1), stride=(1, 1))
+      (temporal_conv): Conv2d(64, 64, kernel_size=(9, 1), stride=(1, 1), padding=(4, 0))
+      (relu): ReLU(inplace=True)
+      (bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (residual): Sequential(
+        (0): Conv2d(9, 64, kernel_size=(1, 1), stride=(1, 1))
+        (1): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+    (1): STGCN_Block(
+      (spatial_conv): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+      (temporal_conv): Conv2d(128, 128, kernel_size=(9, 1), stride=(1, 1), padding=(4, 0))
+      (relu): ReLU(inplace=True)
+      (bn): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      (residual): Sequential(
+        (0): Conv2d(64, 128, kernel_size=(1, 1), stride=(1, 1))
+        (1): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+      )
+    )
+  )
+  (transformer): TransformerEncoder(
+    (layers): ModuleList(
+      (0-3): 4 x TransformerEncoderLayer(
+        (self_attn): MultiheadAttention(
+          (out_proj): NonDynamicallyQuantizableLinear(in_features=128, out_features=128, bias=True)
+        )
+        (linear1): Linear(in_features=128, out_features=256, bias=True)
+        (dropout): Dropout(p=0.1, inplace=False)
+        (linear2): Linear(in_features=256, out_features=128, bias=True)
+        (norm1): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (norm2): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+        (dropout1): Dropout(p=0.1, inplace=False)
+        (dropout2): Dropout(p=0.1, inplace=False)
+      )
+    )
+  )
+  (classifier): Linear(in_features=128, out_features=473, bias=True)
+)
+=== KẾT QUẢ HUẤN LUYỆN ===
+Best Validation Accuracy: 0.8523
