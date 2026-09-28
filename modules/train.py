@@ -109,6 +109,7 @@ def train_one_epoch(model, dataloader, criterion, optimizer, scaler, device):
         optimizer.zero_grad()
         
         with torch.autocast(device_type=device.type, dtype=torch.float16):
+            # Truyền labels vào để ArcFace hoạt động
             outputs = model(seqs)
             loss = criterion(outputs, labels)
         
@@ -234,6 +235,7 @@ def main():
     
     # Đọc thông số Loss & Optimizer
     criterion = nn.CrossEntropyLoss(label_smoothing=t_cfg.get('label_smoothing', 0.1))
+    
     optimizer = optim.AdamW(
         model.parameters(), 
         lr=t_cfg.get('learning_rate', 0.001), 

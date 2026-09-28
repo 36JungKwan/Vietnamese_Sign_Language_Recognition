@@ -42,8 +42,18 @@ class VSLDataset(Dataset):
                 else:
                     missing_files += 1
                     
-        # --- TÍNH NĂNG MỚI: Bơm thêm 10% dữ liệu là trạng thái Đứng Yên (Idle) ---
-        self.idle_count = int(len(self.samples) * 0.1)
+                # Nếu là tập train, nạp thêm các file đã offline augment (_aug_0, _aug_1)
+                if split == "train":
+                    for aug_suffix in ["_aug_0", "_aug_1"]:
+                        aug_path = os.path.join(data_dir, split, gloss, f"{vid}{aug_suffix}.npy")
+                        if os.path.exists(aug_path):
+                            self.samples.append({
+                                'path': aug_path,
+                                'label': self.label_map[gloss]
+                            })
+                    
+        # --- Bơm thêm 15% dữ liệu là trạng thái Đứng Yên (Idle) ---
+        self.idle_count = int(len(self.samples) * 0.15)
         self.total_length = len(self.samples) + self.idle_count
                     
         print(f"📊 [Tập {split.upper()}] Nạp {len(self.samples)} video thật. Sinh thêm {self.idle_count} video IDLE. (Thiếu {missing_files} file).")
@@ -65,11 +75,11 @@ class VSLDataset(Dataset):
             # Lấy ngẫu nhiên 1 video thật
             real_sample = self.samples[np.random.randint(0, len(self.samples))]
             data = np.load(real_sample['path'])
-            # Lấy đúng frame đầu tiên (lúc người múa đang hạ tay chuẩn bị)
-            first_frame = data[0:1] 
-            # Nhân bản lên 48 frames + Thêm nhiễu siêu nhỏ giả lập rung tay do nhịp tim
-            idle_data = np.repeat(first_frame, self.sequence_length, axis=0)
-            idle_data += np.random.normal(0, 0.001, idle_data.shape)
+            # Lấy frame đầu tiên hoặc cuối cùng (lúc người múa đang hạ tay chuẩn bị / kết thúc)
+            rest_frame = data[0:1] if np.random.rand() > 0.5 else data[-1:]
+            # Nhân bản lên 48 frames + Thêm nhiễu thực tế giả lập rung lắc camera / tay (0.005)
+            idle_data = np.repeat(rest_frame, self.sequence_length, axis=0)
+            idle_data += np.random.normal(0, 0.005, idle_data.shape)
             
             data_norm = normalize_scale_and_coords(idle_data)
             tensor = build_9_channel_tensor(data_norm)

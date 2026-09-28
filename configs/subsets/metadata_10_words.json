@@ -1,0 +1,5341 @@
+[
+    {
+        "videoid": "302511",
+        "gloss": "Chào",
+        "split": "test",
+        "fps": 11.11,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.7
+    },
+    {
+        "videoid": "501124",
+        "gloss": "Chào",
+        "split": "test",
+        "fps": 10.85,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.77
+    },
+    {
+        "videoid": "207786",
+        "gloss": "Cảm ơn",
+        "split": "test",
+        "fps": 12.86,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.33
+    },
+    {
+        "videoid": "266931",
+        "gloss": "Cảm ơn",
+        "split": "test",
+        "fps": 9.18,
+        "resolution": "224x224",
+        "num_frames": 24,
+        "duration": 2.61
+    },
+    {
+        "videoid": "750810",
+        "gloss": "Cảm ơn",
+        "split": "test",
+        "fps": 12.17,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.47
+    },
+    {
+        "videoid": "835343",
+        "gloss": "Cảm ơn",
+        "split": "test",
+        "fps": 9.18,
+        "resolution": "224x224",
+        "num_frames": 17,
+        "duration": 1.85
+    },
+    {
+        "videoid": "660081",
+        "gloss": "Hôm nay",
+        "split": "test",
+        "fps": 12.07,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.48
+    },
+    {
+        "videoid": "831295",
+        "gloss": "Hôm nay",
+        "split": "test",
+        "fps": 14.28,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.1
+    },
+    {
+        "videoid": "345369",
+        "gloss": "Tôi",
+        "split": "test",
+        "fps": 15.84,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 1.89
+    },
+    {
+        "videoid": "659951",
+        "gloss": "Tôi",
+        "split": "test",
+        "fps": 15.39,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 1.95
+    },
+    {
+        "videoid": "755087",
+        "gloss": "Tôi",
+        "split": "test",
+        "fps": 13.05,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.3
+    },
+    {
+        "videoid": "975679",
+        "gloss": "Tôi",
+        "split": "test",
+        "fps": 11.84,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.53
+    },
+    {
+        "videoid": "001081",
+        "gloss": "Bóng chuyền",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 57,
+        "duration": 2.28
+    },
+    {
+        "videoid": "001926",
+        "gloss": "Bóng chuyền",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 45,
+        "duration": 1.8
+    },
+    {
+        "videoid": "002768",
+        "gloss": "Bóng chuyền",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 39,
+        "duration": 1.56
+    },
+    {
+        "videoid": "004465",
+        "gloss": "Bóng chuyền",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 42,
+        "duration": 1.68
+    },
+    {
+        "videoid": "005283",
+        "gloss": "Bóng chuyền",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 79,
+        "duration": 3.16
+    },
+    {
+        "videoid": "007144",
+        "gloss": "Bóng chuyền",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 62,
+        "duration": 2.48
+    },
+    {
+        "videoid": "010661",
+        "gloss": "Bóng chuyền",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 65,
+        "duration": 2.6
+    },
+    {
+        "videoid": "012734",
+        "gloss": "Bóng chuyền",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 66,
+        "duration": 2.64
+    },
+    {
+        "videoid": "017108",
+        "gloss": "Bóng chuyền",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 47,
+        "duration": 1.88
+    },
+    {
+        "videoid": "017966",
+        "gloss": "Bóng chuyền",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 45,
+        "duration": 1.8
+    },
+    {
+        "videoid": "018836",
+        "gloss": "Bóng chuyền",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 64,
+        "duration": 2.56
+    },
+    {
+        "videoid": "021707",
+        "gloss": "Bóng chuyền",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 39,
+        "duration": 1.56
+    },
+    {
+        "videoid": "022309",
+        "gloss": "Bóng chuyền",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 39,
+        "duration": 1.56
+    },
+    {
+        "videoid": "333238",
+        "gloss": "Chào",
+        "split": "test",
+        "fps": 11.06,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.71
+    },
+    {
+        "videoid": "003043",
+        "gloss": "Cảm ơn",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 63,
+        "duration": 2.52
+    },
+    {
+        "videoid": "007412",
+        "gloss": "Cảm ơn",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 68,
+        "duration": 2.72
+    },
+    {
+        "videoid": "010061",
+        "gloss": "Cảm ơn",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 59,
+        "duration": 2.36
+    },
+    {
+        "videoid": "012044",
+        "gloss": "Cảm ơn",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "015574",
+        "gloss": "Cảm ơn",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 57,
+        "duration": 2.28
+    },
+    {
+        "videoid": "017364",
+        "gloss": "Cảm ơn",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 63,
+        "duration": 2.52
+    },
+    {
+        "videoid": "021047",
+        "gloss": "Cảm ơn",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 61,
+        "duration": 2.44
+    },
+    {
+        "videoid": "022031",
+        "gloss": "Cảm ơn",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 72,
+        "duration": 2.88
+    },
+    {
+        "videoid": "285652",
+        "gloss": "Cảm ơn",
+        "split": "test",
+        "fps": 12.87,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.33
+    },
+    {
+        "videoid": "448321",
+        "gloss": "Cảm ơn",
+        "split": "test",
+        "fps": 12.68,
+        "resolution": "224x224",
+        "num_frames": 28,
+        "duration": 2.21
+    },
+    {
+        "videoid": "000838",
+        "gloss": "Khỏe",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 51,
+        "duration": 2.04
+    },
+    {
+        "videoid": "000839",
+        "gloss": "Khỏe",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 51,
+        "duration": 2.04
+    },
+    {
+        "videoid": "002530",
+        "gloss": "Khỏe",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 45,
+        "duration": 1.8
+    },
+    {
+        "videoid": "003393",
+        "gloss": "Khỏe",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 49,
+        "duration": 1.96
+    },
+    {
+        "videoid": "004226",
+        "gloss": "Khỏe",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 56,
+        "duration": 2.24
+    },
+    {
+        "videoid": "005057",
+        "gloss": "Khỏe",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 47,
+        "duration": 1.88
+    },
+    {
+        "videoid": "010400",
+        "gloss": "Khỏe",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 57,
+        "duration": 2.28
+    },
+    {
+        "videoid": "010401",
+        "gloss": "Khỏe",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 61,
+        "duration": 2.44
+    },
+    {
+        "videoid": "015982",
+        "gloss": "Khỏe",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 48,
+        "duration": 1.92
+    },
+    {
+        "videoid": "023964",
+        "gloss": "Khỏe",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 52,
+        "duration": 2.08
+    },
+    {
+        "videoid": "024064",
+        "gloss": "Khỏe",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 47,
+        "duration": 1.88
+    },
+    {
+        "videoid": "001234",
+        "gloss": "Sinh viên",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 61,
+        "duration": 2.44
+    },
+    {
+        "videoid": "002090",
+        "gloss": "Sinh viên",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 51,
+        "duration": 2.04
+    },
+    {
+        "videoid": "002942",
+        "gloss": "Sinh viên",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 67,
+        "duration": 2.68
+    },
+    {
+        "videoid": "004627",
+        "gloss": "Sinh viên",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "006406",
+        "gloss": "Sinh viên",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 76,
+        "duration": 3.04
+    },
+    {
+        "videoid": "011922",
+        "gloss": "Sinh viên",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 61,
+        "duration": 2.44
+    },
+    {
+        "videoid": "013732",
+        "gloss": "Sinh viên",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "015440",
+        "gloss": "Sinh viên",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "016390",
+        "gloss": "Sinh viên",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "018995",
+        "gloss": "Sinh viên",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "022717",
+        "gloss": "Sinh viên",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 68,
+        "duration": 2.72
+    },
+    {
+        "videoid": "001018",
+        "gloss": "Tháng sáu",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 52,
+        "duration": 2.08
+    },
+    {
+        "videoid": "004408",
+        "gloss": "Tháng sáu",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "006180",
+        "gloss": "Tháng sáu",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 69,
+        "duration": 2.76
+    },
+    {
+        "videoid": "007986",
+        "gloss": "Tháng sáu",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "008908",
+        "gloss": "Tháng sáu",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "008909",
+        "gloss": "Tháng sáu",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 52,
+        "duration": 2.08
+    },
+    {
+        "videoid": "012669",
+        "gloss": "Tháng sáu",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 75,
+        "duration": 3.0
+    },
+    {
+        "videoid": "016173",
+        "gloss": "Tháng sáu",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "019639",
+        "gloss": "Tháng sáu",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 51,
+        "duration": 2.04
+    },
+    {
+        "videoid": "022563",
+        "gloss": "Tháng sáu",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 57,
+        "duration": 2.28
+    },
+    {
+        "videoid": "023347",
+        "gloss": "Tháng sáu",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 63,
+        "duration": 2.52
+    },
+    {
+        "videoid": "024247",
+        "gloss": "Tháng sáu",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 63,
+        "duration": 2.52
+    },
+    {
+        "videoid": "424500",
+        "gloss": "Tôi",
+        "split": "test",
+        "fps": 12.56,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.39
+    },
+    {
+        "videoid": "002535",
+        "gloss": "Đau",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "004229",
+        "gloss": "Đau",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 62,
+        "duration": 2.48
+    },
+    {
+        "videoid": "005875",
+        "gloss": "Đau",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 66,
+        "duration": 2.64
+    },
+    {
+        "videoid": "009580",
+        "gloss": "Đau",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 49,
+        "duration": 1.96
+    },
+    {
+        "videoid": "011330",
+        "gloss": "Đau",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "011331",
+        "gloss": "Đau",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 44,
+        "duration": 1.76
+    },
+    {
+        "videoid": "012485",
+        "gloss": "Đau",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "014992",
+        "gloss": "Đau",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 48,
+        "duration": 1.92
+    },
+    {
+        "videoid": "015986",
+        "gloss": "Đau",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "016842",
+        "gloss": "Đau",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "017717",
+        "gloss": "Đau",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "018591",
+        "gloss": "Đau",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "019460",
+        "gloss": "Đau",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 44,
+        "duration": 1.76
+    },
+    {
+        "videoid": "019464",
+        "gloss": "Đau",
+        "split": "test",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 42,
+        "duration": 1.68
+    },
+    {
+        "videoid": "000218",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 61,
+        "duration": 2.44
+    },
+    {
+        "videoid": "000219",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 70,
+        "duration": 2.8
+    },
+    {
+        "videoid": "001080",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 46,
+        "duration": 1.84
+    },
+    {
+        "videoid": "001925",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 39,
+        "duration": 1.56
+    },
+    {
+        "videoid": "001927",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 62,
+        "duration": 2.48
+    },
+    {
+        "videoid": "002769",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 64,
+        "duration": 2.56
+    },
+    {
+        "videoid": "003622",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 65,
+        "duration": 2.6
+    },
+    {
+        "videoid": "003623",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 47,
+        "duration": 1.88
+    },
+    {
+        "videoid": "004464",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "005284",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 76,
+        "duration": 3.04
+    },
+    {
+        "videoid": "006239",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 82,
+        "duration": 3.28
+    },
+    {
+        "videoid": "006240",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 91,
+        "duration": 3.64
+    },
+    {
+        "videoid": "007145",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 65,
+        "duration": 2.6
+    },
+    {
+        "videoid": "008048",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "008049",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 40,
+        "duration": 1.6
+    },
+    {
+        "videoid": "008967",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 61,
+        "duration": 2.44
+    },
+    {
+        "videoid": "008968",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 42,
+        "duration": 1.68
+    },
+    {
+        "videoid": "009807",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 67,
+        "duration": 2.68
+    },
+    {
+        "videoid": "009808",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "010662",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 70,
+        "duration": 2.8
+    },
+    {
+        "videoid": "011745",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 67,
+        "duration": 2.68
+    },
+    {
+        "videoid": "011746",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "012735",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 63,
+        "duration": 2.52
+    },
+    {
+        "videoid": "012736",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 65,
+        "duration": 2.6
+    },
+    {
+        "videoid": "013574",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 48,
+        "duration": 1.92
+    },
+    {
+        "videoid": "013575",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "014399",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 57,
+        "duration": 2.28
+    },
+    {
+        "videoid": "014400",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 61,
+        "duration": 2.44
+    },
+    {
+        "videoid": "015261",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 44,
+        "duration": 1.76
+    },
+    {
+        "videoid": "015262",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 57,
+        "duration": 2.28
+    },
+    {
+        "videoid": "016231",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 67,
+        "duration": 2.68
+    },
+    {
+        "videoid": "016232",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 48,
+        "duration": 1.92
+    },
+    {
+        "videoid": "017107",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 39,
+        "duration": 1.56
+    },
+    {
+        "videoid": "017967",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 52,
+        "duration": 2.08
+    },
+    {
+        "videoid": "018835",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 64,
+        "duration": 2.56
+    },
+    {
+        "videoid": "019896",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 70,
+        "duration": 2.8
+    },
+    {
+        "videoid": "019897",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 64,
+        "duration": 2.56
+    },
+    {
+        "videoid": "020823",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 48,
+        "duration": 1.92
+    },
+    {
+        "videoid": "020923",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 46,
+        "duration": 1.84
+    },
+    {
+        "videoid": "021425",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 43,
+        "duration": 1.72
+    },
+    {
+        "videoid": "021467",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 43,
+        "duration": 1.72
+    },
+    {
+        "videoid": "021807",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 42,
+        "duration": 1.68
+    },
+    {
+        "videoid": "022351",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 46,
+        "duration": 1.84
+    },
+    {
+        "videoid": "022591",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 71,
+        "duration": 2.84
+    },
+    {
+        "videoid": "022641",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "022741",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 63,
+        "duration": 2.52
+    },
+    {
+        "videoid": "023193",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 59,
+        "duration": 2.36
+    },
+    {
+        "videoid": "023235",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "023475",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "023575",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 41,
+        "duration": 1.64
+    },
+    {
+        "videoid": "024275",
+        "gloss": "Bóng chuyền",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 53,
+        "duration": 2.12
+    },
+    {
+        "videoid": "140605",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 16.57,
+        "resolution": "224x224",
+        "num_frames": 21,
+        "duration": 1.27
+    },
+    {
+        "videoid": "172792",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.39,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.63
+    },
+    {
+        "videoid": "338651",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 14.52,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.07
+    },
+    {
+        "videoid": "392683",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.54,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.6
+    },
+    {
+        "videoid": "420015",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 14.13,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.12
+    },
+    {
+        "videoid": "468203",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.54,
+        "resolution": "224x224",
+        "num_frames": 16,
+        "duration": 1.39
+    },
+    {
+        "videoid": "582662",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 10.73,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.8
+    },
+    {
+        "videoid": "593554",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 15.33,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 1.96
+    },
+    {
+        "videoid": "792094",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.84,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.53
+    },
+    {
+        "videoid": "910891",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 14.06,
+        "resolution": "224x224",
+        "num_frames": 22,
+        "duration": 1.56
+    },
+    {
+        "videoid": "933980",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 13.64,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.2
+    },
+    {
+        "videoid": "956253",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.71,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.56
+    },
+    {
+        "videoid": "466643",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 10.87,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.76
+    },
+    {
+        "videoid": "772642",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 14.06,
+        "resolution": "224x224",
+        "num_frames": 22,
+        "duration": 1.56
+    },
+    {
+        "videoid": "aug_140605_001",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 16.57,
+        "resolution": "224x224",
+        "num_frames": 21,
+        "duration": 1.27,
+        "source_videoid": "140605",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_338651_002",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 14.52,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.07,
+        "source_videoid": "338651",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_956253_003",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.71,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.56,
+        "source_videoid": "956253",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_392683_004",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.54,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.6,
+        "source_videoid": "392683",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_910891_005",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 14.06,
+        "resolution": "224x224",
+        "num_frames": 22,
+        "duration": 1.56,
+        "source_videoid": "910891",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_582662_006",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 10.73,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.8,
+        "source_videoid": "582662",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_910891_007",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 14.06,
+        "resolution": "224x224",
+        "num_frames": 22,
+        "duration": 1.56,
+        "source_videoid": "910891",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_593554_008",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 15.33,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 1.96,
+        "source_videoid": "593554",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_910891_009",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 14.06,
+        "resolution": "224x224",
+        "num_frames": 22,
+        "duration": 1.56,
+        "source_videoid": "910891",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_466643_010",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 10.87,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.76,
+        "source_videoid": "466643",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_772642_011",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 14.06,
+        "resolution": "224x224",
+        "num_frames": 22,
+        "duration": 1.56,
+        "source_videoid": "772642",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_792094_012",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.84,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.53,
+        "source_videoid": "792094",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_792094_013",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.84,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.53,
+        "source_videoid": "792094",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_338651_014",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 14.52,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.07,
+        "source_videoid": "338651",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_172792_015",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.39,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.63,
+        "source_videoid": "172792",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_593554_016",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 15.33,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 1.96,
+        "source_videoid": "593554",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_956253_017",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.71,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.56,
+        "source_videoid": "956253",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_140605_018",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 16.57,
+        "resolution": "224x224",
+        "num_frames": 21,
+        "duration": 1.27,
+        "source_videoid": "140605",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_338651_019",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 14.52,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.07,
+        "source_videoid": "338651",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_338651_020",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 14.52,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.07,
+        "source_videoid": "338651",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_172792_021",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.39,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.63,
+        "source_videoid": "172792",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_792094_022",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.84,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.53,
+        "source_videoid": "792094",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_338651_023",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 14.52,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.07,
+        "source_videoid": "338651",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_392683_024",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.54,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.6,
+        "source_videoid": "392683",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_468203_025",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.54,
+        "resolution": "224x224",
+        "num_frames": 16,
+        "duration": 1.39,
+        "source_videoid": "468203",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_392683_026",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.54,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.6,
+        "source_videoid": "392683",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_468203_027",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.54,
+        "resolution": "224x224",
+        "num_frames": 16,
+        "duration": 1.39,
+        "source_videoid": "468203",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_140605_028",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 16.57,
+        "resolution": "224x224",
+        "num_frames": 21,
+        "duration": 1.27,
+        "source_videoid": "140605",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_468203_029",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.54,
+        "resolution": "224x224",
+        "num_frames": 16,
+        "duration": 1.39,
+        "source_videoid": "468203",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_392683_030",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.54,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.6,
+        "source_videoid": "392683",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_338651_031",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 14.52,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.07,
+        "source_videoid": "338651",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_582662_032",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 10.73,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.8,
+        "source_videoid": "582662",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_792094_033",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.84,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.53,
+        "source_videoid": "792094",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_933980_034",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 13.64,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.2,
+        "source_videoid": "933980",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_338651_035",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 14.52,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.07,
+        "source_videoid": "338651",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_392683_036",
+        "gloss": "Chào",
+        "split": "train",
+        "fps": 11.54,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.6,
+        "source_videoid": "392683",
+        "is_augmented": true
+    },
+    {
+        "videoid": "000484",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 59,
+        "duration": 2.36
+    },
+    {
+        "videoid": "000485",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "001335",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 64,
+        "duration": 2.56
+    },
+    {
+        "videoid": "001336",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 62,
+        "duration": 2.48
+    },
+    {
+        "videoid": "002191",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 65,
+        "duration": 2.6
+    },
+    {
+        "videoid": "002192",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 59,
+        "duration": 2.36
+    },
+    {
+        "videoid": "003044",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 71,
+        "duration": 2.84
+    },
+    {
+        "videoid": "003881",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 67,
+        "duration": 2.68
+    },
+    {
+        "videoid": "003882",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 67,
+        "duration": 2.68
+    },
+    {
+        "videoid": "004726",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 52,
+        "duration": 2.08
+    },
+    {
+        "videoid": "004727",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 43,
+        "duration": 1.72
+    },
+    {
+        "videoid": "005532",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 64,
+        "duration": 2.56
+    },
+    {
+        "videoid": "005533",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 67,
+        "duration": 2.68
+    },
+    {
+        "videoid": "006508",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 76,
+        "duration": 3.04
+    },
+    {
+        "videoid": "006509",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 75,
+        "duration": 3.0
+    },
+    {
+        "videoid": "007413",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "008343",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 53,
+        "duration": 2.12
+    },
+    {
+        "videoid": "008344",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 54,
+        "duration": 2.16
+    },
+    {
+        "videoid": "008345",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "009226",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 62,
+        "duration": 2.48
+    },
+    {
+        "videoid": "009227",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "010062",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 64,
+        "duration": 2.56
+    },
+    {
+        "videoid": "010956",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 57,
+        "duration": 2.28
+    },
+    {
+        "videoid": "010957",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 51,
+        "duration": 2.04
+    },
+    {
+        "videoid": "012043",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 65,
+        "duration": 2.6
+    },
+    {
+        "videoid": "013001",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 65,
+        "duration": 2.6
+    },
+    {
+        "videoid": "013002",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 66,
+        "duration": 2.64
+    },
+    {
+        "videoid": "013833",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 56,
+        "duration": 2.24
+    },
+    {
+        "videoid": "013834",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 57,
+        "duration": 2.28
+    },
+    {
+        "videoid": "014648",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "014649",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 59,
+        "duration": 2.36
+    },
+    {
+        "videoid": "015575",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 49,
+        "duration": 1.96
+    },
+    {
+        "videoid": "016486",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 66,
+        "duration": 2.64
+    },
+    {
+        "videoid": "016487",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 65,
+        "duration": 2.6
+    },
+    {
+        "videoid": "017363",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "018233",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 77,
+        "duration": 3.08
+    },
+    {
+        "videoid": "018234",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 56,
+        "duration": 2.24
+    },
+    {
+        "videoid": "019098",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 49,
+        "duration": 1.96
+    },
+    {
+        "videoid": "019099",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 44,
+        "duration": 1.76
+    },
+    {
+        "videoid": "020188",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 63,
+        "duration": 2.52
+    },
+    {
+        "videoid": "020189",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "021147",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "021931",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 65,
+        "duration": 2.6
+    },
+    {
+        "videoid": "022815",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 62,
+        "duration": 2.48
+    },
+    {
+        "videoid": "022915",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 63,
+        "duration": 2.52
+    },
+    {
+        "videoid": "023699",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 66,
+        "duration": 2.64
+    },
+    {
+        "videoid": "023799",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 65,
+        "duration": 2.6
+    },
+    {
+        "videoid": "024399",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 67,
+        "duration": 2.68
+    },
+    {
+        "videoid": "024499",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "141832",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 9.9,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 3.03
+    },
+    {
+        "videoid": "262060",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 12.17,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.47
+    },
+    {
+        "videoid": "348237",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 12.34,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.43
+    },
+    {
+        "videoid": "379766",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 13.64,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.2
+    },
+    {
+        "videoid": "470858",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 12.86,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.33
+    },
+    {
+        "videoid": "475190",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 12.68,
+        "resolution": "224x224",
+        "num_frames": 16,
+        "duration": 1.26
+    },
+    {
+        "videoid": "482364",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 18.16,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 1.65
+    },
+    {
+        "videoid": "526117",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 12.17,
+        "resolution": "224x224",
+        "num_frames": 20,
+        "duration": 1.64
+    },
+    {
+        "videoid": "679364",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 13.14,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.28
+    },
+    {
+        "videoid": "710805",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 12.28,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.44
+    },
+    {
+        "videoid": "802448",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 10.6,
+        "resolution": "224x224",
+        "num_frames": 25,
+        "duration": 2.36
+    },
+    {
+        "videoid": "815198",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 10.01,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 3.0
+    },
+    {
+        "videoid": "920391",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 12.68,
+        "resolution": "224x224",
+        "num_frames": 29,
+        "duration": 2.29
+    },
+    {
+        "videoid": "941204",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 10.47,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.87
+    },
+    {
+        "videoid": "950132",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 13.64,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.2
+    },
+    {
+        "videoid": "950155",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 12.87,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.33
+    },
+    {
+        "videoid": "975136",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 12.28,
+        "resolution": "224x224",
+        "num_frames": 23,
+        "duration": 1.87
+    },
+    {
+        "videoid": "270395",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 12.34,
+        "resolution": "224x224",
+        "num_frames": 29,
+        "duration": 2.35
+    },
+    {
+        "videoid": "320281",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 12.87,
+        "resolution": "224x224",
+        "num_frames": 21,
+        "duration": 1.63
+    },
+    {
+        "videoid": "360222",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 10.47,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.87
+    },
+    {
+        "videoid": "687080",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 12.86,
+        "resolution": "224x224",
+        "num_frames": 23,
+        "duration": 1.79
+    },
+    {
+        "videoid": "872343",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 12.68,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.37
+    },
+    {
+        "videoid": "885884",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 12.17,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.47
+    },
+    {
+        "videoid": "918011",
+        "gloss": "Cảm ơn",
+        "split": "train",
+        "fps": 12.86,
+        "resolution": "224x224",
+        "num_frames": 28,
+        "duration": 2.18
+    },
+    {
+        "videoid": "157174",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.32,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.43
+    },
+    {
+        "videoid": "406327",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 11.42,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.63
+    },
+    {
+        "videoid": "614723",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 11.69,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.57
+    },
+    {
+        "videoid": "680238",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.73,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.36
+    },
+    {
+        "videoid": "768854",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.88,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.33
+    },
+    {
+        "videoid": "842411",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.2,
+        "resolution": "224x224",
+        "num_frames": 29,
+        "duration": 2.38
+    },
+    {
+        "videoid": "889359",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 14.06,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.13
+    },
+    {
+        "videoid": "232731",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.44,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.41
+    },
+    {
+        "videoid": "387636",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 13.24,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.27
+    },
+    {
+        "videoid": "aug_387636_001",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 13.24,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.27,
+        "source_videoid": "387636",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_680238_002",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.73,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.36,
+        "source_videoid": "680238",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_842411_003",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.2,
+        "resolution": "224x224",
+        "num_frames": 29,
+        "duration": 2.38,
+        "source_videoid": "842411",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_387636_004",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 13.24,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.27,
+        "source_videoid": "387636",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_157174_005",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.32,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.43,
+        "source_videoid": "157174",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_889359_006",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 14.06,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.13,
+        "source_videoid": "889359",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_768854_007",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.88,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.33,
+        "source_videoid": "768854",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_680238_008",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.73,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.36,
+        "source_videoid": "680238",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_157174_009",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.32,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.43,
+        "source_videoid": "157174",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_157174_010",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.32,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.43,
+        "source_videoid": "157174",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_614723_011",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 11.69,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.57,
+        "source_videoid": "614723",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_768854_012",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.88,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.33,
+        "source_videoid": "768854",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_768854_013",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.88,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.33,
+        "source_videoid": "768854",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_406327_014",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 11.42,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.63,
+        "source_videoid": "406327",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_232731_015",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.44,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.41,
+        "source_videoid": "232731",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_406327_016",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 11.42,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.63,
+        "source_videoid": "406327",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_157174_017",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.32,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.43,
+        "source_videoid": "157174",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_157174_018",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.32,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.43,
+        "source_videoid": "157174",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_157174_019",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.32,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.43,
+        "source_videoid": "157174",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_842411_020",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.2,
+        "resolution": "224x224",
+        "num_frames": 29,
+        "duration": 2.38,
+        "source_videoid": "842411",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_680238_021",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.73,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.36,
+        "source_videoid": "680238",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_680238_022",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.73,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.36,
+        "source_videoid": "680238",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_232731_023",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.44,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.41,
+        "source_videoid": "232731",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_842411_024",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.2,
+        "resolution": "224x224",
+        "num_frames": 29,
+        "duration": 2.38,
+        "source_videoid": "842411",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_680238_025",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.73,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.36,
+        "source_videoid": "680238",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_680238_026",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.73,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.36,
+        "source_videoid": "680238",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_232731_027",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.44,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.41,
+        "source_videoid": "232731",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_157174_028",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.32,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.43,
+        "source_videoid": "157174",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_614723_029",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 11.69,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.57,
+        "source_videoid": "614723",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_406327_030",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 11.42,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.63,
+        "source_videoid": "406327",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_157174_031",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.32,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.43,
+        "source_videoid": "157174",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_768854_032",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.88,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.33,
+        "source_videoid": "768854",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_387636_033",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 13.24,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.27,
+        "source_videoid": "387636",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_406327_034",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 11.42,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.63,
+        "source_videoid": "406327",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_680238_035",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.73,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.36,
+        "source_videoid": "680238",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_842411_036",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.2,
+        "resolution": "224x224",
+        "num_frames": 29,
+        "duration": 2.38,
+        "source_videoid": "842411",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_889359_037",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 14.06,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.13,
+        "source_videoid": "889359",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_768854_038",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.88,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.33,
+        "source_videoid": "768854",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_387636_039",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 13.24,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.27,
+        "source_videoid": "387636",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_842411_040",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.2,
+        "resolution": "224x224",
+        "num_frames": 29,
+        "duration": 2.38,
+        "source_videoid": "842411",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_768854_041",
+        "gloss": "Hôm nay",
+        "split": "train",
+        "fps": 12.88,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.33,
+        "source_videoid": "768854",
+        "is_augmented": true
+    },
+    {
+        "videoid": "001680",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 51,
+        "duration": 2.04
+    },
+    {
+        "videoid": "001681",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 46,
+        "duration": 1.84
+    },
+    {
+        "videoid": "002531",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 49,
+        "duration": 1.96
+    },
+    {
+        "videoid": "003392",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "004225",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "005056",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 47,
+        "duration": 1.88
+    },
+    {
+        "videoid": "005871",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "005872",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 56,
+        "duration": 2.24
+    },
+    {
+        "videoid": "006905",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 62,
+        "duration": 2.48
+    },
+    {
+        "videoid": "006906",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 54,
+        "duration": 2.16
+    },
+    {
+        "videoid": "007794",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 47,
+        "duration": 1.88
+    },
+    {
+        "videoid": "007795",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 48,
+        "duration": 1.92
+    },
+    {
+        "videoid": "008730",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 45,
+        "duration": 1.8
+    },
+    {
+        "videoid": "008731",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 46,
+        "duration": 1.84
+    },
+    {
+        "videoid": "009576",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 48,
+        "duration": 1.92
+    },
+    {
+        "videoid": "009577",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 45,
+        "duration": 1.8
+    },
+    {
+        "videoid": "011325",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 51,
+        "duration": 2.04
+    },
+    {
+        "videoid": "011326",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 49,
+        "duration": 1.96
+    },
+    {
+        "videoid": "012480",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 51,
+        "duration": 2.04
+    },
+    {
+        "videoid": "012481",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 54,
+        "duration": 2.16
+    },
+    {
+        "videoid": "013344",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 63,
+        "duration": 2.52
+    },
+    {
+        "videoid": "013345",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 67,
+        "duration": 2.68
+    },
+    {
+        "videoid": "014172",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 45,
+        "duration": 1.8
+    },
+    {
+        "videoid": "014173",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 53,
+        "duration": 2.12
+    },
+    {
+        "videoid": "014988",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "014989",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 51,
+        "duration": 2.04
+    },
+    {
+        "videoid": "015981",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "016838",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 61,
+        "duration": 2.44
+    },
+    {
+        "videoid": "016839",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 57,
+        "duration": 2.28
+    },
+    {
+        "videoid": "017712",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 54,
+        "duration": 2.16
+    },
+    {
+        "videoid": "017713",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 54,
+        "duration": 2.16
+    },
+    {
+        "videoid": "018587",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "018588",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 54,
+        "duration": 2.16
+    },
+    {
+        "videoid": "019456",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 49,
+        "duration": 1.96
+    },
+    {
+        "videoid": "019457",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 41,
+        "duration": 1.64
+    },
+    {
+        "videoid": "020595",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "020596",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 44,
+        "duration": 1.76
+    },
+    {
+        "videoid": "021312",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "021412",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 52,
+        "duration": 2.08
+    },
+    {
+        "videoid": "022196",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "022296",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "023080",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 51,
+        "duration": 2.04
+    },
+    {
+        "videoid": "023180",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 45,
+        "duration": 1.8
+    },
+    {
+        "videoid": "024664",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 53,
+        "duration": 2.12
+    },
+    {
+        "videoid": "024764",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 48,
+        "duration": 1.92
+    },
+    {
+        "videoid": "aug_015981_001",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0,
+        "source_videoid": "015981",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_013345_002",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 67,
+        "duration": 2.68,
+        "source_videoid": "013345",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_004225_003",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4,
+        "source_videoid": "004225",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_016838_004",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 61,
+        "duration": 2.44,
+        "source_videoid": "016838",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_008731_005",
+        "gloss": "Khỏe",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 46,
+        "duration": 1.84,
+        "source_videoid": "008731",
+        "is_augmented": true
+    },
+    {
+        "videoid": "000379",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 56,
+        "duration": 2.24
+    },
+    {
+        "videoid": "000380",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "001235",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "002091",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "002941",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 63,
+        "duration": 2.52
+    },
+    {
+        "videoid": "003782",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 68,
+        "duration": 2.72
+    },
+    {
+        "videoid": "003783",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 67,
+        "duration": 2.68
+    },
+    {
+        "videoid": "004626",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "005434",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 68,
+        "duration": 2.72
+    },
+    {
+        "videoid": "005435",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 68,
+        "duration": 2.72
+    },
+    {
+        "videoid": "006407",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 77,
+        "duration": 3.08
+    },
+    {
+        "videoid": "007301",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 61,
+        "duration": 2.44
+    },
+    {
+        "videoid": "007302",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 59,
+        "duration": 2.36
+    },
+    {
+        "videoid": "008230",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "008231",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 56,
+        "duration": 2.24
+    },
+    {
+        "videoid": "009125",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 62,
+        "duration": 2.48
+    },
+    {
+        "videoid": "009126",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "009963",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 54,
+        "duration": 2.16
+    },
+    {
+        "videoid": "009964",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "010842",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 65,
+        "duration": 2.6
+    },
+    {
+        "videoid": "010843",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "011923",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 66,
+        "duration": 2.64
+    },
+    {
+        "videoid": "012899",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 63,
+        "duration": 2.52
+    },
+    {
+        "videoid": "012900",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 59,
+        "duration": 2.36
+    },
+    {
+        "videoid": "013733",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "014552",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 61,
+        "duration": 2.44
+    },
+    {
+        "videoid": "014553",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "015439",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 59,
+        "duration": 2.36
+    },
+    {
+        "videoid": "016389",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 64,
+        "duration": 2.56
+    },
+    {
+        "videoid": "017263",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "017264",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 66,
+        "duration": 2.64
+    },
+    {
+        "videoid": "018133",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 68,
+        "duration": 2.72
+    },
+    {
+        "videoid": "018134",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 69,
+        "duration": 2.76
+    },
+    {
+        "videoid": "018996",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 54,
+        "duration": 2.16
+    },
+    {
+        "videoid": "020068",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 66,
+        "duration": 2.64
+    },
+    {
+        "videoid": "020069",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 59,
+        "duration": 2.36
+    },
+    {
+        "videoid": "020899",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 68,
+        "duration": 2.72
+    },
+    {
+        "videoid": "020999",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "021783",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 65,
+        "duration": 2.6
+    },
+    {
+        "videoid": "021883",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 64,
+        "duration": 2.56
+    },
+    {
+        "videoid": "023551",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 63,
+        "duration": 2.52
+    },
+    {
+        "videoid": "023651",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 64,
+        "duration": 2.56
+    },
+    {
+        "videoid": "024351",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 64,
+        "duration": 2.56
+    },
+    {
+        "videoid": "aug_020068_001",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 66,
+        "duration": 2.64,
+        "source_videoid": "020068",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_014552_002",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 61,
+        "duration": 2.44,
+        "source_videoid": "014552",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_002941_003",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 63,
+        "duration": 2.52,
+        "source_videoid": "002941",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_010842_004",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 65,
+        "duration": 2.6,
+        "source_videoid": "010842",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_009125_005",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 62,
+        "duration": 2.48,
+        "source_videoid": "009125",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_008230_006",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4,
+        "source_videoid": "008230",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_017263_007",
+        "gloss": "Sinh viên",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4,
+        "source_videoid": "017263",
+        "is_augmented": true
+    },
+    {
+        "videoid": "000158",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "000159",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "001019",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 57,
+        "duration": 2.28
+    },
+    {
+        "videoid": "001864",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 54,
+        "duration": 2.16
+    },
+    {
+        "videoid": "001865",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 49,
+        "duration": 1.96
+    },
+    {
+        "videoid": "002706",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "002707",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 59,
+        "duration": 2.36
+    },
+    {
+        "videoid": "003563",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 63,
+        "duration": 2.52
+    },
+    {
+        "videoid": "003564",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 62,
+        "duration": 2.48
+    },
+    {
+        "videoid": "004406",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "004407",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "005223",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 75,
+        "duration": 3.0
+    },
+    {
+        "videoid": "005224",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 65,
+        "duration": 2.6
+    },
+    {
+        "videoid": "006181",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 75,
+        "duration": 3.0
+    },
+    {
+        "videoid": "007081",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 63,
+        "duration": 2.52
+    },
+    {
+        "videoid": "007082",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 64,
+        "duration": 2.56
+    },
+    {
+        "videoid": "007985",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 64,
+        "duration": 2.56
+    },
+    {
+        "videoid": "009744",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 59,
+        "duration": 2.36
+    },
+    {
+        "videoid": "009745",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 62,
+        "duration": 2.48
+    },
+    {
+        "videoid": "009746",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 57,
+        "duration": 2.28
+    },
+    {
+        "videoid": "010594",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 56,
+        "duration": 2.24
+    },
+    {
+        "videoid": "010595",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 75,
+        "duration": 3.0
+    },
+    {
+        "videoid": "011680",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 70,
+        "duration": 2.8
+    },
+    {
+        "videoid": "011681",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 70,
+        "duration": 2.8
+    },
+    {
+        "videoid": "012670",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 56,
+        "duration": 2.24
+    },
+    {
+        "videoid": "013517",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "013518",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "014342",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 57,
+        "duration": 2.28
+    },
+    {
+        "videoid": "014343",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 51,
+        "duration": 2.04
+    },
+    {
+        "videoid": "015194",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 69,
+        "duration": 2.76
+    },
+    {
+        "videoid": "015195",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 59,
+        "duration": 2.36
+    },
+    {
+        "videoid": "016172",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "017040",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "017041",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "017042",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 59,
+        "duration": 2.36
+    },
+    {
+        "videoid": "017902",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 79,
+        "duration": 3.16
+    },
+    {
+        "videoid": "017903",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 65,
+        "duration": 2.6
+    },
+    {
+        "videoid": "018774",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 53,
+        "duration": 2.12
+    },
+    {
+        "videoid": "018775",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "019638",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 54,
+        "duration": 2.16
+    },
+    {
+        "videoid": "019833",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 68,
+        "duration": 2.72
+    },
+    {
+        "videoid": "019834",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 64,
+        "duration": 2.56
+    },
+    {
+        "videoid": "020695",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 65,
+        "duration": 2.6
+    },
+    {
+        "videoid": "020795",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 53,
+        "duration": 2.12
+    },
+    {
+        "videoid": "021579",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 63,
+        "duration": 2.52
+    },
+    {
+        "videoid": "021679",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 65,
+        "duration": 2.6
+    },
+    {
+        "videoid": "022463",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 74,
+        "duration": 2.96
+    },
+    {
+        "videoid": "023447",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "024147",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "aug_019833_001",
+        "gloss": "Tháng sáu",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 68,
+        "duration": 2.72,
+        "source_videoid": "019833",
+        "is_augmented": true
+    },
+    {
+        "videoid": "145814",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 12.33,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.43
+    },
+    {
+        "videoid": "273580",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 13.6,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.21
+    },
+    {
+        "videoid": "303440",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 11.69,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.57
+    },
+    {
+        "videoid": "349068",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 10.72,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.8
+    },
+    {
+        "videoid": "350786",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 13.84,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.17
+    },
+    {
+        "videoid": "398768",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 14.64,
+        "resolution": "224x224",
+        "num_frames": 22,
+        "duration": 1.5
+    },
+    {
+        "videoid": "485709",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 10.98,
+        "resolution": "224x224",
+        "num_frames": 14,
+        "duration": 1.28
+    },
+    {
+        "videoid": "495019",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 11.54,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.6
+    },
+    {
+        "videoid": "530816",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 16.72,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 1.79
+    },
+    {
+        "videoid": "558933",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 12.38,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.42
+    },
+    {
+        "videoid": "565776",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 11.12,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.7
+    },
+    {
+        "videoid": "570735",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 16.56,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 1.81
+    },
+    {
+        "videoid": "591798",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 10.98,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.73
+    },
+    {
+        "videoid": "854540",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 11.12,
+        "resolution": "224x224",
+        "num_frames": 26,
+        "duration": 2.34
+    },
+    {
+        "videoid": "884897",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 11.71,
+        "resolution": "224x224",
+        "num_frames": 28,
+        "duration": 2.39
+    },
+    {
+        "videoid": "908554",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 12.98,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.31
+    },
+    {
+        "videoid": "948343",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 12.36,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.43
+    },
+    {
+        "videoid": "971728",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 11.24,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.67
+    },
+    {
+        "videoid": "726258",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 14.06,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.13
+    },
+    {
+        "videoid": "740255",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 16.26,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 1.84
+    },
+    {
+        "videoid": "809217",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 15.17,
+        "resolution": "224x224",
+        "num_frames": 21,
+        "duration": 1.38
+    },
+    {
+        "videoid": "888939",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 18.81,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 1.59
+    },
+    {
+        "videoid": "aug_273580_001",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 13.6,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.21,
+        "source_videoid": "273580",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_591798_002",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 10.98,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.73,
+        "source_videoid": "591798",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_145814_003",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 12.33,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.43,
+        "source_videoid": "145814",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_145814_004",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 12.33,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.43,
+        "source_videoid": "145814",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_726258_005",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 14.06,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.13,
+        "source_videoid": "726258",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_726258_006",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 14.06,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.13,
+        "source_videoid": "726258",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_558933_007",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 12.38,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.42,
+        "source_videoid": "558933",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_303440_008",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 11.69,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.57,
+        "source_videoid": "303440",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_888939_009",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 18.81,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 1.59,
+        "source_videoid": "888939",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_908554_010",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 12.98,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.31,
+        "source_videoid": "908554",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_740255_011",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 16.26,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 1.84,
+        "source_videoid": "740255",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_888939_012",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 18.81,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 1.59,
+        "source_videoid": "888939",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_971728_013",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 11.24,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.67,
+        "source_videoid": "971728",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_565776_014",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 11.12,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.7,
+        "source_videoid": "565776",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_485709_015",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 10.98,
+        "resolution": "224x224",
+        "num_frames": 14,
+        "duration": 1.28,
+        "source_videoid": "485709",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_398768_016",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 14.64,
+        "resolution": "224x224",
+        "num_frames": 22,
+        "duration": 1.5,
+        "source_videoid": "398768",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_908554_017",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 12.98,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.31,
+        "source_videoid": "908554",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_884897_018",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 11.71,
+        "resolution": "224x224",
+        "num_frames": 28,
+        "duration": 2.39,
+        "source_videoid": "884897",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_809217_019",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 15.17,
+        "resolution": "224x224",
+        "num_frames": 21,
+        "duration": 1.38,
+        "source_videoid": "809217",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_558933_020",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 12.38,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.42,
+        "source_videoid": "558933",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_145814_021",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 12.33,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.43,
+        "source_videoid": "145814",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_570735_022",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 16.56,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 1.81,
+        "source_videoid": "570735",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_888939_023",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 18.81,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 1.59,
+        "source_videoid": "888939",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_570735_024",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 16.56,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 1.81,
+        "source_videoid": "570735",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_565776_025",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 11.12,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.7,
+        "source_videoid": "565776",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_726258_026",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 14.06,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.13,
+        "source_videoid": "726258",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_349068_027",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 10.72,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.8,
+        "source_videoid": "349068",
+        "is_augmented": true
+    },
+    {
+        "videoid": "aug_303440_028",
+        "gloss": "Tôi",
+        "split": "train",
+        "fps": 11.69,
+        "resolution": "224x224",
+        "num_frames": 30,
+        "duration": 2.57,
+        "source_videoid": "303440",
+        "is_augmented": true
+    },
+    {
+        "videoid": "000842",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 54,
+        "duration": 2.16
+    },
+    {
+        "videoid": "000843",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 56,
+        "duration": 2.24
+    },
+    {
+        "videoid": "000844",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 59,
+        "duration": 2.36
+    },
+    {
+        "videoid": "001684",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 52,
+        "duration": 2.08
+    },
+    {
+        "videoid": "001685",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 46,
+        "duration": 1.84
+    },
+    {
+        "videoid": "002534",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 49,
+        "duration": 1.96
+    },
+    {
+        "videoid": "003396",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 59,
+        "duration": 2.36
+    },
+    {
+        "videoid": "003397",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 62,
+        "duration": 2.48
+    },
+    {
+        "videoid": "004230",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "005060",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "005061",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 48,
+        "duration": 1.92
+    },
+    {
+        "videoid": "005876",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "006909",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 62,
+        "duration": 2.48
+    },
+    {
+        "videoid": "006910",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 64,
+        "duration": 2.56
+    },
+    {
+        "videoid": "007798",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 52,
+        "duration": 2.08
+    },
+    {
+        "videoid": "007799",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 49,
+        "duration": 1.96
+    },
+    {
+        "videoid": "008734",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 52,
+        "duration": 2.08
+    },
+    {
+        "videoid": "008735",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "008736",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "008737",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 44,
+        "duration": 1.76
+    },
+    {
+        "videoid": "009581",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 57,
+        "duration": 2.28
+    },
+    {
+        "videoid": "010404",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 66,
+        "duration": 2.64
+    },
+    {
+        "videoid": "010405",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 61,
+        "duration": 2.44
+    },
+    {
+        "videoid": "010406",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "011329",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 50,
+        "duration": 2.0
+    },
+    {
+        "videoid": "011332",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 40,
+        "duration": 1.6
+    },
+    {
+        "videoid": "012484",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 49,
+        "duration": 1.96
+    },
+    {
+        "videoid": "012486",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 59,
+        "duration": 2.36
+    },
+    {
+        "videoid": "012487",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "013348",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 61,
+        "duration": 2.44
+    },
+    {
+        "videoid": "013349",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 62,
+        "duration": 2.48
+    },
+    {
+        "videoid": "014176",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 46,
+        "duration": 1.84
+    },
+    {
+        "videoid": "014177",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 49,
+        "duration": 1.96
+    },
+    {
+        "videoid": "014993",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 54,
+        "duration": 2.16
+    },
+    {
+        "videoid": "015985",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "015987",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 46,
+        "duration": 1.84
+    },
+    {
+        "videoid": "015988",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 48,
+        "duration": 1.92
+    },
+    {
+        "videoid": "016843",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 57,
+        "duration": 2.28
+    },
+    {
+        "videoid": "017716",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 55,
+        "duration": 2.2
+    },
+    {
+        "videoid": "018592",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 54,
+        "duration": 2.16
+    },
+    {
+        "videoid": "019461",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 64,
+        "duration": 2.56
+    },
+    {
+        "videoid": "019462",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 39,
+        "duration": 1.56
+    },
+    {
+        "videoid": "019463",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 47,
+        "duration": 1.88
+    },
+    {
+        "videoid": "019465",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 43,
+        "duration": 1.72
+    },
+    {
+        "videoid": "020599",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 60,
+        "duration": 2.4
+    },
+    {
+        "videoid": "020600",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 53,
+        "duration": 2.12
+    },
+    {
+        "videoid": "020601",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 45,
+        "duration": 1.8
+    },
+    {
+        "videoid": "020602",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 44,
+        "duration": 1.76
+    },
+    {
+        "videoid": "021314",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "021414",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 59,
+        "duration": 2.36
+    },
+    {
+        "videoid": "022198",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 63,
+        "duration": 2.52
+    },
+    {
+        "videoid": "022298",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 66,
+        "duration": 2.64
+    },
+    {
+        "videoid": "023082",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 53,
+        "duration": 2.12
+    },
+    {
+        "videoid": "023182",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 51,
+        "duration": 2.04
+    },
+    {
+        "videoid": "023966",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 49,
+        "duration": 1.96
+    },
+    {
+        "videoid": "024066",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 49,
+        "duration": 1.96
+    },
+    {
+        "videoid": "024666",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 58,
+        "duration": 2.32
+    },
+    {
+        "videoid": "024766",
+        "gloss": "Đau",
+        "split": "train",
+        "fps": 25.0,
+        "resolution": "224x224",
+        "num_frames": 54,
+        "duration": 2.16
+    }
+]

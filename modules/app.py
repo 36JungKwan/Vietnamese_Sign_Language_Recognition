@@ -45,15 +45,25 @@ frame_queue = asyncio.Queue(maxsize=30)
 llm_queue = asyncio.Queue()
 tts_queue = asyncio.Queue()
 active_connections = []
+main_loop = None
 
-# Trạng thái nhận diện (Được bật/tắt bằng phím Space)
-IS_RECORDING = False
+# Trạng thái nhận diện (Mặc định bật, có thể bật/tắt bằng phím Space)
+IS_RECORDING = True
+
+async def broadcast_status():
+    for conn in list(active_connections):
+        try:
+            await conn.send_json({"type": "status", "is_recording": IS_RECORDING})
+        except Exception:
+            pass
 
 def toggle_recording():
     global IS_RECORDING
     IS_RECORDING = not IS_RECORDING
     status_str = "🟢 ĐANG BẬT NHẬN DIỆN (Bắt đầu múa ký hiệu...)" if IS_RECORDING else "🔴 ĐÃ TẮT NHẬN DIỆN (Tạm dừng)"
     print(f"\n[HOTKEY SPACE] {status_str}", flush=True)
+    if main_loop and main_loop.is_running():
+        asyncio.run_coroutine_threadsafe(broadcast_status(), main_loop)
 
 # ==========================================
 # CÁC HÀM XỬ LÝ DỮ LIỆU ĐỘNG TÁC (VISION PIPELINE)
@@ -137,9 +147,15 @@ async def vision_worker():
     global IS_RECORDING
     print("[Worker] Vision Worker Started. Đang kiểm tra file...", flush=True)
     
-    label_map_path = r"C:\Users\dotru\STUDIE\Competition\Sang_tao_tre_AI\VSL_pipeline\modules\label_map_472.json"
-    checkpoint_path = r"C:\Users\dotru\STUDIE\Competition\Sang_tao_tre_AI\VSL_pipeline\modules\checkpoints\ctr_gcn\baseline_20260917_1148\best_vsl_model.pth" 
+    label_map_path = r"C:\Users\dotru\STUDIE\Competition\Sang_tao_tre_AI\VSL_pipeline\modules\label_map_472_10w.json"
+    checkpoint_path = r"C:\Users\dotru\STUDIE\Competition\Sang_tao_tre_AI\VSL_pipeline\modules\checkpoints\ctr_gcn\finetuned_10words\best_vsl_model.pth" 
     
+    # Danh sách từ mục tiêu hiển thị radar
+    TARGET_WORDS = {
+        "Bóng chuyền", "Chào", "Cảm ơn", "Hôm nay", "Khỏe", 
+        "Sinh viên", "Tháng sáu", "Tôi", "Đau", "Idle"
+    }
+
     try:
         idx_to_class, num_classes = load_label_map(label_map_path)
         
@@ -155,14 +171,18 @@ async def vision_worker():
         decoder = TemporalDecoder(
             idx_to_class, 
             alpha=0.5, 
-            conf_thresh=0.5,      
+            conf_thresh=0.40,      
             motion_thresh=0.005,
-            end_frames_thresh=15
+            cooldown_frames=20,
+            end_frames_thresh=25
         )
         frame_buffer = collections.deque(maxlen=cfg['data']['sequence_length'])
         
         print("⏳ Đang khởi tạo MediaPipe (Mất khoảng 2-3 giây)...", flush=True)
         
+        prev_landmarks = None
+        hand_miss_counters = {"left": 0, "right": 0}
+
         with mp.solutions.holistic.Holistic(min_detection_confidence=0.5, min_tracking_confidence=0.5) as holistic:
             print("✅ MediaPipe đã sẵn sàng! Đang chờ Camera...", flush=True)
             
@@ -175,6 +195,9 @@ async def vision_worker():
                     # Nếu trạng thái chuyển từ bật -> tắt hoặc tắt -> bật, clear buffer để tránh dính frames cũ
                     if last_recording_state != IS_RECORDING:
                         frame_buffer.clear()
+                        decoder.reset()
+                        prev_landmarks = None
+                        hand_miss_counters = {"left": 0, "right": 0}
                         last_recording_state = IS_RECORDING
 
                     np_arr = np.frombuffer(jpeg_bytes, np.uint8)
@@ -190,42 +213,68 @@ async def vision_worker():
                     if IS_RECORDING:
                         hand_detected = bool(results.left_hand_landmarks or results.right_hand_landmarks)
                         
-                        # Dùng hàm CHUẨN để bóc tách 76 node
-                        landmarks = extract_standard_landmarks(results)
+                        # Dùng hàm CHUẨN để bóc tách 76 node có cơ chế Hold Last Valid Position (Ý 2)
+                        landmarks = extract_standard_landmarks(results, prev_landmarks, hand_miss_counters)
+                        prev_landmarks = landmarks.copy()
                         frame_buffer.append(landmarks)
                         
                         if len(frame_buffer) == cfg['data']['sequence_length']:
                             # Xây dựng mảng (48, 76, 3)
                             raw_data = np.stack(list(frame_buffer), axis=0)
                             
-                            # Chạy qua phễu chuẩn hóa kích thước + tọa độ
+                            # Chạy qua phễu chuẩn hóa kích thước + tọa độ (kèm Smart Fallback Scale - Ý 4)
                             norm_data = normalize_scale_and_coords(raw_data)
                             
                             # Tính vận tốc/gia tốc và convert ra Tensor
                             input_tensor = build_9_channel_tensor(norm_data).unsqueeze(0).to(DEVICE)
                             
-                            with torch.no_grad(), torch.autocast(device_type=DEVICE.type, dtype=torch.float16):
-                                logits = model(input_tensor)
+                            with torch.no_grad():
+                                if DEVICE.type == "cuda":
+                                    with torch.autocast(device_type="cuda", dtype=torch.float16):
+                                        logits = model(input_tensor)
+                                else:
+                                    logits = model(input_tensor)
                                 probs = torch.softmax(logits, dim=-1).cpu().numpy()[0]
                             
                             motion_energy = np.mean(np.abs(landmarks[33:75] - frame_buffer[-2][33:75]))
                             top_idx = np.argmax(probs)
                             top_word = idx_to_class[top_idx]
-                            
-                            # NẾU MODEL ĐOÁN RA IDLE (Đứng im) THÌ BỎ QUA KHÔNG GỬI VÀO DECODER
+                            top_prob = probs[top_idx]
+
+                            # Radar hiển thị trực quan nếu độ tin cậy vượt ngưỡng cơ bản
+                            if top_prob > 0.15:
+                                is_target_tag = "🎯" if (top_word in TARGET_WORDS and top_word != "Idle") else "⚪"
+                                print(f"👀 [Radar] {is_target_tag} {top_word:<12} ({top_prob*100:.1f}%) | Motion: {motion_energy:.4f}", flush=True)
+
+                            # NẾU MODEL ĐOÁN RA IDLE (Đứng im)
                             if top_word == "Idle":
-                                # Tạo mảng xác suất giả (toàn số 0) để Decoder không nhận nhầm từ Idle
                                 dummy_probs = np.zeros_like(probs)
-                                # Ép motion_energy = 0 và hand_detected = False để kích hoạt cơ chế ngắt câu
                                 new_word, sentence = decoder.process_window(dummy_probs, 0.0, False)
-                            else:
+                            elif top_word in TARGET_WORDS:
+                                # Từ thuộc nhóm từ mục tiêu: Gửi xác suất thật vào Decoder
                                 new_word, sentence = decoder.process_window(probs, motion_energy, hand_detected)
+                            else:
+                                dummy_probs = np.zeros_like(probs)
+                                new_word, sentence = decoder.process_window(dummy_probs, motion_energy, hand_detected)
                                 
-                                if new_word:
-                                    print(f"[AI] ⚡ Đoán được từ: {new_word}", flush=True)
-                                if sentence:
-                                    print(f"[AI] 🟢 Ngắt câu! Gửi lên LLM: {sentence}", flush=True)
-                                    await llm_queue.put(sentence)
+                            if new_word and new_word in TARGET_WORDS and new_word != "Idle":
+                                print(f"[AI] ⚡ Đoán được từ: {new_word} ({top_prob*100:.1f}%)", flush=True)
+                                for conn in list(active_connections):
+                                    try:
+                                        await conn.send_json({"type": "word", "word": new_word})
+                                    except Exception:
+                                        pass
+
+                            if sentence:
+                                valid_sentence = [w for w in sentence if w in TARGET_WORDS and w != "Idle"]
+                                if valid_sentence:
+                                    print(f"[AI] 🟢 Ngắt câu! Gửi lên LLM: {valid_sentence}", flush=True)
+                                    for conn in list(active_connections):
+                                        try:
+                                            await conn.send_json({"type": "sentence_start", "words": valid_sentence})
+                                        except Exception:
+                                            pass
+                                    await llm_queue.put(valid_sentence)
                                 
                 except Exception as e:
                     print(f"❌ [LỖI FRAME]: {e}", flush=True)
@@ -239,13 +288,26 @@ async def vision_worker():
 
 async def llm_worker():
     print("[Worker] LLM Worker Started.")
-    agent = LLMAgent(api_key=api_key) 
+    agent = None
+    try:
+        agent = LLMAgent(api_key=api_key)
+    except Exception as e:
+        print(f"⚠️ [LLM Warning] Không khởi tạo được LLMAgent: {e}. Sẽ dùng fallback ghép từ thô.")
     
     while True:
         sentence_words = await llm_queue.get()
         print(f"[LLM] Đang xử lý: {sentence_words}...")
         
-        final_sentence = await asyncio.to_thread(agent.process_sentence, sentence_words)
+        final_sentence = ""
+        if agent is not None:
+            try:
+                final_sentence = await asyncio.to_thread(agent.process_sentence, sentence_words)
+            except Exception as e:
+                print(f"⚠️ [LLM Error]: {e}. Sử dụng chuỗi từ thô.")
+                final_sentence = " ".join(sentence_words).capitalize() + "."
+        else:
+            final_sentence = " ".join(sentence_words).capitalize() + "."
+
         print(f"[LLM] ✅ Dịch hoàn chỉnh: {final_sentence}")
         
         await tts_queue.put(final_sentence)
@@ -256,7 +318,7 @@ async def tts_worker():
     while True:
         final_sentence = await tts_queue.get()
         
-        for connection in active_connections:
+        for connection in list(active_connections):
             try:
                 await connection.send_json({
                     "type": "final_sentence",
@@ -272,6 +334,9 @@ async def tts_worker():
 # ==========================================
 @asynccontextmanager
 async def lifespan(app: FastAPI):
+    global main_loop
+    main_loop = asyncio.get_running_loop()
+
     # Đăng ký sự kiện nhấn phím Space toàn hệ thống
     if KEYBOARD_AVAILABLE:
         try:
@@ -302,6 +367,14 @@ async def video_stream(websocket: WebSocket):
     active_connections.append(websocket)
     print(f"🔌 [WebSocket] Client đã kết nối!")
     try:
+        await websocket.send_json({
+            "type": "status", 
+            "is_recording": IS_RECORDING
+        })
+    except Exception:
+        pass
+
+    try:
         while True:
             # Nhận cả bytes (video frame) hoặc text (lệnh điều khiển từ Web Client)
             message = await websocket.receive()
@@ -320,10 +393,7 @@ async def video_stream(websocket: WebSocket):
                 # Nếu client web bắt phím Space và gửi text qua socket
                 if text_msg in ["space", "toggle", "toggle_recording"]:
                     toggle_recording()
-                    await websocket.send_json({
-                        "type": "status", 
-                        "is_recording": IS_RECORDING
-                    })
+                    await broadcast_status()
             
     except WebSocketDisconnect:
         if websocket in active_connections:
@@ -333,6 +403,7 @@ async def video_stream(websocket: WebSocket):
         if websocket in active_connections:
             active_connections.remove(websocket)
         print(f"❌ [WebSocket LỖI SERVER]: {e}")
+
 
 if __name__ == "__main__":
     import uvicorn
